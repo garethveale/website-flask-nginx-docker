@@ -1,0 +1,43 @@
+Front End
+- Static single page app written in React (consider Next.js)
+    -Nextjs offers SSR rather than CSR allowing users to begin using the page while waiting for react to build virtual DOM etc.
+- Material-UI provides extensive components for React
+- Redux for state management
+
+Back End
+- Flask application
+- Restful APIs will serve data models as JSON to be consumed by React
+- Websockets and (maybe) Gevent for concurrent connections to Nginx webserver
+- Swagger for API documentation
+
+Database
+- SQL Alchemy wrapper - ORM
+- SQLLite DB in development
+- PostgreSQL server in production
+- Redis for caching and reducing IO operations
+- Multiple instances of Elastic search nodes - db searching
+
+Security
+- Caddy - HTTPS, reverse proxy and file serving
+- Authentication server
+
+Deployment
+- Digital Ocean - Linux Hosting Provider
+- Docker containers for each microservice
+- Webserver - Nginx in it's own container acting as a proxy for incoming connections
+- Appserver - Gunicorn for handling req that need dynamic generation
+- Travis - continuous deployment and test integration
+
+Containers
+- Front end
+- API
+- DB
+- Cache
+- NGINX
+- Elastic search
+
+https://www.fullstackpython.com/websockets.html
+https://stackoverflow.com/questions/23111654/websockets-in-flask
+https://stackoverflow.com/questions/39847455/nginx-is-inner-or-outer-docker
+https://medium.com/@kmmanoj/deploying-a-scalable-flask-app-using-gunicorn-and-nginx-in-docker-part-1-3344f13c9649
+https://serverfault.com/questions/331256/why-do-i-need-nginx-and-something-like-gunicorn
