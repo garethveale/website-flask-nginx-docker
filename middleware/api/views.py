@@ -5,8 +5,8 @@ from api.models import Post, BookNote
 from flask import jsonify
 
 
-@app.route('/')
-def index():
+@app.route('/posts')
+def posts():
     posts = []
     post_list = Post.query.all()
 
@@ -20,6 +20,24 @@ def index():
         })
 
     return jsonify({'posts': posts})
+
+
+@app.route('/books')
+def book_notes():
+    book_notes = []
+    book_note_list = BookNote.query.all()
+
+    for book_note in book_note_list:
+        categories = [category.name for category in book_note.book_categories]
+        book_notes.append({
+            'title': book_note.title,
+            'body': book_note.body,
+            'author': book_note.author,
+            'categories': categories,
+            'time_posted': book_note.timestamp
+        })
+
+    return jsonify({'book_notes': book_notes})
 
 # @app.route('/contact', methods=['GET', 'POST'])
 # def contact():
