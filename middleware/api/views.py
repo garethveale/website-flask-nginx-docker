@@ -1,7 +1,8 @@
 from api import app
 from api.forms import ContactForm
 from api.models import Post, BookNote
-from api.email import send_contact_form
+from api.send_email import send_contact_form
+from api.github import git_stats
 from flask import jsonify
 
 
@@ -46,3 +47,9 @@ def contact():
         flash('Email sent to Gareth')  # TODO remove this
         return redirect(url_for('index'))
     return 'Form should be displayed'
+
+
+@app.route('/software')
+def software():
+    user = 'garethiv'
+    return git_stats(user)

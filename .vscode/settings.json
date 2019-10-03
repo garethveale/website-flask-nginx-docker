@@ -4,6 +4,6 @@
     "python.linting.enabled": true,
     "python.linting.pep8Enabled": true,
     "python.linting.pep8Args": [
-        "--ignore=E128,E501,E402",
+        "--ignore=E128,E501,E402,E701,E901",
     ]
 }
