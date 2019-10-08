@@ -1,6 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState} from 'react';
 import './App.css';
-import { Posts } from './components/Posts'
+import { Posts } from './components/Posts';
+import HomepageLayout from './components/HomepageLayout';
+import { Container } from 'semantic-ui-react';
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -8,18 +10,26 @@ function App() {
   useEffect(() => {
     fetch('/posts').then(response => 
       response.json().then(data => {
-        setPosts(data);
+        setPosts(data.posts);
       })
     );
   }, []);
 
   console.log(posts);
-
-  return (
+    
+  /**return (
     <div className="App">
-      <Posts posts={posts}/>
+      <Container>
+        <Posts posts={ posts }/>
+      </Container>    
     </div>
   );
+}**/
+return (
+  <div className="App">
+    <HomepageLayout />
+  </div>
+);
 }
 
 export default App;
