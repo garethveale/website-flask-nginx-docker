@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
   Container,
-  Header,
   Icon,
   Menu,
   Responsive,
@@ -20,53 +19,21 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
-/* eslint-disable react/no-multi-comp */
-/* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
- * such things.
- */
-const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as='h3'
-      content='Gareth Veale'
-      inverted
-      style={{
-        fontSize: mobile ? '1em' : '2em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-      }}
-    />
-    <Header
-      as='h4'
-      content='Software Engineer.'
-      inverted
-      style={{
-        fontSize: mobile ? '0.5em' : '0.75em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
-    />
-  </Container>
-)
-
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-}
-
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = {}
+  state = { activeItem: 'home' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
 
   render() {
     const { children } = this.props
-    const { fixed } = this.state
+    const { fixed, activeItem } = this.state
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
@@ -75,28 +42,29 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 500, padding: '1em 0em' }}
-            vertical
-          >
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size='large'
-            >
-              <Container>
-                <Menu.Item as='a' active position='centre'>Home</Menu.Item>
-                <Menu.Item as='a' position='center'>Work</Menu.Item>
-                <Menu.Item as='a' position='center'>Company</Menu.Item>
-                <Menu.Item as='a' position='center'>Careers</Menu.Item>
-              </Container>
-            </Menu>
-            <HomepageHeading />
-          </Segment>
+        <Segment 
+        inverted 
+        vertical
+        style={{ padding: '1em' }}
+        >
+          <Menu inverted pointing secondary>
+            <Menu.Item
+              name='home'
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}
+            />
+            <Menu.Item
+              name='messages'
+              active={activeItem === 'messages'}
+              onClick={this.handleItemClick}
+            />
+            <Menu.Item
+              name='friends'
+              active={activeItem === 'friends'}
+              onClick={this.handleItemClick}
+            />
+          </Menu>
+        </Segment>
         </Visibility>
 
         {children}
@@ -110,15 +78,17 @@ DesktopContainer.propTypes = {
 }
 
 class MobileContainer extends Component {
-  state = {}
+  state = { activeItem: 'home' }
 
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
   handleSidebarHide = () => this.setState({ sidebarOpened: false })
 
   handleToggle = () => this.setState({ sidebarOpened: true })
 
   render() {
     const { children } = this.props
-    const { sidebarOpened } = this.state
+    const { sidebarOpened, activeItem } = this.state
 
     return (
       <Responsive
@@ -146,7 +116,7 @@ class MobileContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em' }}
+            style={{ padding: '1em 0em' }}
             vertical
           >
             <Container>
@@ -154,15 +124,10 @@ class MobileContainer extends Component {
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name='sidebar' />
                 </Menu.Item>
-                <Menu.Item as='a' active position='centre'>Home</Menu.Item>
-                <Menu.Item as='a' position='center'>Work</Menu.Item>
-                <Menu.Item as='a' position='center'>Company</Menu.Item>
-                <Menu.Item as='a' position='center'>Careers</Menu.Item>
               </Menu>
             </Container>
-            <HomepageHeading mobile />
-          </Segment>
 
+          </Segment>
           {children}
         </Sidebar.Pusher>
       </Responsive>
@@ -185,8 +150,4 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const HomepageLayout = () => (
-  <ResponsiveContainer />
-)
-
-export default HomepageLayout;
+export default ResponsiveContainer;

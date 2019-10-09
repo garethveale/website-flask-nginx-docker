@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import './App.css';
 import { Posts } from './components/Posts';
-import HomepageLayout from './components/HomepageLayout';
+import ResponsiveContainer from './components/ResponsiveContainer';
+import { HomepageHeading } from './components/HomepageHeading';
 import { Container } from 'semantic-ui-react';
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
 }**/
 return (
   <div className="App">
-    <HomepageLayout />
+    <ResponsiveContainer>
+      <HomepageHeading />
+    </ResponsiveContainer>
   </div>
 );
 }
