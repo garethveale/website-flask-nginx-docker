@@ -42,29 +42,28 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-        <Segment 
-        inverted 
-        vertical
-        style={{ padding: '1em' }}
-        >
-          <Menu inverted pointing secondary>
-            <Menu.Item
-              name='home'
-              active={activeItem === 'home'}
-              onClick={this.handleItemClick}
-            />
-            <Menu.Item
-              name='messages'
-              active={activeItem === 'messages'}
-              onClick={this.handleItemClick}
-            />
-            <Menu.Item
-              name='friends'
-              active={activeItem === 'friends'}
-              onClick={this.handleItemClick}
-            />
-          </Menu>
-        </Segment>
+          <Segment
+            inverted
+            textAlign='center'
+            style={{ minHeight: 700, padding: '1em' }}
+            vertical
+          >
+            <Menu
+              fixed={fixed ? 'top' : null}
+              inverted={!fixed}
+              pointing={!fixed}
+              secondary={!fixed}
+            >
+              <Container>
+                <Menu.Item as='a' active>
+                  Home
+                </Menu.Item>
+                <Menu.Item as='a'>Work</Menu.Item>
+                <Menu.Item as='a'>Company</Menu.Item>
+                <Menu.Item as='a'>Careers</Menu.Item>
+              </Container>
+            </Menu>
+          </Segment>
         </Visibility>
 
         {children}
@@ -98,10 +97,10 @@ class MobileContainer extends Component {
       >
         <Sidebar
           as={Menu}
-          animation='push'
-          inverted
+          animation='overlay'
           onHide={this.handleSidebarHide}
           vertical
+          inverted
           visible={sidebarOpened}
         >
           <Menu.Item as='a' active>
@@ -112,15 +111,19 @@ class MobileContainer extends Component {
           <Menu.Item as='a'>Careers</Menu.Item>
         </Sidebar>
 
-        <Sidebar.Pusher dimmed={sidebarOpened}>
+        <Sidebar.Pusher 
+        dimmed={sidebarOpened}
+        style={{ minHeight: 1000 }}
+        inverted
+        >
           <Segment
-            inverted
             textAlign='center'
             style={{ padding: '1em 0em' }}
             vertical
+            inverted
           >
             <Container>
-              <Menu inverted pointing secondary size='large'>
+              <Menu inverted pointing secondary>
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name='sidebar' />
                 </Menu.Item>
