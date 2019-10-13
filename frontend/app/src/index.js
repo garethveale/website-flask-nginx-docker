@@ -5,7 +5,8 @@ import './index.css';
 import 'semantic-ui-css/semantic.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Posts from './Posts/Posts';
+import Posts from './posts/Posts';
+import Notfound from './common/NotFound'
 
 const routing = (
     <Router>
@@ -18,8 +19,11 @@ const routing = (
             <Link to="/posts">Posts</Link>
             </li>
         </ul>
-        <Route exact path="/" component={App} />
-        <Route path="/posts" component={Posts} />
+        <Switch>
+            <Route exact path="/" component={App} />
+            <Route path="/posts" component={Posts} />
+            <Route component={Notfound} />
+        </Switch>  
       </div>
     </Router>
 )

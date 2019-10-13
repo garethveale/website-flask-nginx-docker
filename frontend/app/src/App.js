@@ -1,9 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import './App.css';
-import { Posts } from './Posts/PostList';
-import ResponsiveContainer from './components/ResponsiveContainer';
-import Home from './Home/Home';
-import { NavBar } from './components/NavBar';
+import { Posts } from './posts/PostList';
+import ResponsiveContainer from './common/ResponsiveContainer';
+import Home from './home/Home';
+import { NavBar } from './common/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
