@@ -1,4 +1,4 @@
-import React from './node_modules/react'
+import React from 'react'
 import { HomepageHeading } from './HomepageHeading';
 
 class Home extends React.Component {
