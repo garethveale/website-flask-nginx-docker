@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { List, Header } from './node_modules/semantic-ui-react';
+import React from 'react';
+import { List, Header } from 'semantic-ui-react';
 
 export const Posts = ({ posts }) => {
     return (

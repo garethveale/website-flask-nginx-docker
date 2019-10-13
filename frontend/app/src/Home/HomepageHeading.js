@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { Container, Header, Segment } from './node_modules/semantic-ui-react';
+import React from 'react';
+import { Container, Header, Segment } from 'semantic-ui-react';
 /* eslint-disable react/no-multi-comp */
 /**  Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.*/
