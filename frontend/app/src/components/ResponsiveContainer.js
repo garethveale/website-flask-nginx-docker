@@ -37,34 +37,7 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Visibility
-          once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
-        >
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 700, padding: '1em' }}
-            vertical
-          >
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-            >
-              <Container>
-                <Menu.Item as='a' active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-              </Container>
-            </Menu>
-          </Segment>
-        </Visibility>
+        
 
         {children}
       </Responsive>
@@ -95,44 +68,7 @@ class MobileContainer extends Component {
         getWidth={getWidth}
         maxWidth={Responsive.onlyMobile.maxWidth}
       >
-        <Sidebar
-          as={Menu}
-          animation='overlay'
-          onHide={this.handleSidebarHide}
-          vertical
-          inverted
-          visible={sidebarOpened}
-        >
-          <Menu.Item as='a' active>
-            Home
-          </Menu.Item>
-          <Menu.Item as='a'>Work</Menu.Item>
-          <Menu.Item as='a'>Company</Menu.Item>
-          <Menu.Item as='a'>Careers</Menu.Item>
-        </Sidebar>
-
-        <Sidebar.Pusher 
-        dimmed={sidebarOpened}
-        style={{ minHeight: 1000 }}
-        inverted
-        >
-          <Segment
-            textAlign='center'
-            style={{ padding: '1em 0em' }}
-            vertical
-            inverted
-          >
-            <Container>
-              <Menu inverted pointing secondary>
-                <Menu.Item onClick={this.handleToggle}>
-                  <Icon name='sidebar' />
-                </Menu.Item>
-              </Menu>
-            </Container>
-
-          </Segment>
-          {children}
-        </Sidebar.Pusher>
+        {children}
       </Responsive>
     )
   }

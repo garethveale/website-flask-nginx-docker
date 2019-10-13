@@ -6,16 +6,13 @@ export const NavBar = ({ activeItem }) => {
     return (
         <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Gareth Veale</Nav.Link>
+                <Nav.Link eventKey="link-1" href='#'>Posts</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Posts</Nav.Link>
+                <Nav.Link eventKey="link-1" href='#'>Book Notes</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Books</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-2">Contact Me</Nav.Link>
+                <Nav.Link eventKey="link-2" href='#'>Contact Me</Nav.Link>
             </Nav.Item>
         </Nav>
     )
