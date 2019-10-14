@@ -1,5 +1,4 @@
 import React, { useEffect, useState} from 'react';
-import './App.css';
 import { Posts } from './posts/PostList';
 import ResponsiveContainer from './common/ResponsiveContainer';
 import Home from './home/Home';
