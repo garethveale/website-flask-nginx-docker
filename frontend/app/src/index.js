@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Posts from './posts/Posts';
+import Post from './posts/Post';
 import Notfound from './common/NotFound'
 
 const routing = (
@@ -22,6 +23,7 @@ const routing = (
         <Switch>
             <Route exact path="/" component={App} />
             <Route path="/posts" component={Posts} />
+            <Route path="/post/:slug" component={Post} />
             <Route component={Notfound} />
         </Switch>  
       </div>
