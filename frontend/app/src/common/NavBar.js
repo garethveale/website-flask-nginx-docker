@@ -1,5 +1,4 @@
 import React from 'react';
-import { List, Button } from 'semantic-ui-react';
 import Nav from 'react-bootstrap/Nav';
 
 export const NavBar = ({ activeItem }) => {

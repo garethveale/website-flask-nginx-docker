@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { PageHeading } from '../common/PageHeading';
 
 class Posts extends React.Component {
   render() {
-    return <h1>Posts</h1>
+    return <PageHeading title='Posts' />
   }
 }
+
 export default Posts;

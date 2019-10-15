@@ -1,13 +1,8 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
-  Container,
-  Icon,
-  Menu,
   Responsive,
-  Segment,
   Sidebar,
-  Visibility,
 } from 'semantic-ui-react'
 
 // Heads up!
@@ -19,10 +14,6 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = { activeItem: 'home' }
 
@@ -37,6 +28,8 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+        
+
         {children}
       </Responsive>
     )

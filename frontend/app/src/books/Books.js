@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { PageHeading } from '../common/PageHeading';
 
 class Books extends React.Component {
   render() {
-    return <h1>Books</h1>
+    return <PageHeading title='Books'/>
   }
 }
 export default Books;

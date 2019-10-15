@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { PageHeading } from '../common/PageHeading';
 
 class Contact extends React.Component {
   render() {
-    return <h1>Contact</h1>
+    return <PageHeading title='Contact'/>
   }
 }
 export default Contact;
