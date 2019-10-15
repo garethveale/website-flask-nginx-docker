@@ -37,8 +37,6 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        
-
         {children}
       </Responsive>
     )

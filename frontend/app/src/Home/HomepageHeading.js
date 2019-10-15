@@ -5,7 +5,7 @@ import { Container, Header, Segment } from 'semantic-ui-react';
  * such things.*/
  
 export const HomepageHeading = ({ mobile }) => (
-    <Container>
+    <Container text>
       <Header
         as='h3'
         content='Gareth Veale'
