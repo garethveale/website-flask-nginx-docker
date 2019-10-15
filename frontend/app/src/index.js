@@ -5,12 +5,6 @@ import 'semantic-ui-css/semantic.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-/*
-const routing = (
-
-)
-ReactDOM.render(routing, document.getElementById('root'));
-*/
 ReactDOM.render(
   <App />, 
 document.getElementById('root'));
