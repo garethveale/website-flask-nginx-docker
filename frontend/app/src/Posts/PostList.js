@@ -1,7 +1,7 @@
 import React from 'react';
 import { List, Header } from 'semantic-ui-react';
 
-export const Posts = ({ posts }) => {
+export const PostList = ({ posts }) => {
     return (
         <List>
             {posts.map(post => {
