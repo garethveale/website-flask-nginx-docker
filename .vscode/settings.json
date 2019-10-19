@@ -2,8 +2,8 @@
     "python.pythonPath": "/Users/Gareth/miniconda3/envs/myWebsiteEnv/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
-    "python.linting.pep8Enabled": true,
-    "python.linting.pep8Args": [
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestyleArgs": [
         "--ignore=E128,E501,E402,E701,E901",
     ]
 }
