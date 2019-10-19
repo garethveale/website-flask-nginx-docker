@@ -8,6 +8,7 @@ export const PageHeading = ({ title }) => (
         as='h3'
         content={title}
         inverted
+        textAlign='center'
         style={{
           fontSize: '2em',
           fontWeight: 'normal',
