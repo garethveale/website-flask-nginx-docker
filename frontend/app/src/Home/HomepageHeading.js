@@ -34,7 +34,7 @@ export const HomepageHeading = ({ mobile }) => (
                 fontWeight: 'normal',
                 marginBottom: '0.2em',
                 padding: '0em',
-                color: 'black'
+                color: 'black',
               }}
             />
             <Header
