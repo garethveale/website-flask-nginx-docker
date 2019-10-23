@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { HomepageHeading } from './HomepageHeading';
 import { ThumbnailRow } from './ThumbnailRow';
 import { About } from './About';

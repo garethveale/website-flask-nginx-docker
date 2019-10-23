@@ -21,9 +21,6 @@ export const NavBar = ({ activeItem }) => {
                 <Nav.Link style={linkStyle} href='/posts'>Posts</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link style={linkStyle} href='/books'>Book Notes</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
                 <Nav.Link style={linkStyle} href='/contact'>Contact Me</Nav.Link>
             </Nav.Item>
         </Nav>

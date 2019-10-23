@@ -5,7 +5,6 @@ import { NavBar } from './common/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './home/Home';
 import Posts from './posts/Posts';
-import Books from './books/Books';
 import Contact from './contact/Contact';
 import Software from './software/Software';
 import Post from './posts/Post';
@@ -41,7 +40,6 @@ return (
               <Route exact path="/" component={Home} />
               <Route path="/posts" component={Posts} />
               <Route path="/post/:slug" component={Post} />
-              <Route path="/books" component={Books} />
               <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
               <Route component={Notfound} />
