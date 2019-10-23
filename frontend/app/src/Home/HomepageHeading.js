@@ -10,7 +10,7 @@ export const HomepageHeading = ({ mobile }) => (
         paddingTop: '2em'
       }}
     >
-      <Grid celled
+      <Grid
         style={{
           borderWidth: '0',
         }}
@@ -32,6 +32,8 @@ export const HomepageHeading = ({ mobile }) => (
               style={{
                 fontSize: mobile ? '1em' : '2em',
                 fontWeight: 'normal',
+                marginBottom: '0.2em',
+                padding: '0em',
                 color: 'black'
               }}
             />
@@ -42,23 +44,27 @@ export const HomepageHeading = ({ mobile }) => (
               style={{
                 fontSize: mobile ? '0.75em' : '1em',
                 fontWeight: 'normal',
-                marginTop: mobile ? '0.5em' : '1.5em',
-                marginBottom: mobile ? '0.5em' : '1.5em',
+                margin: '0em',
                 color: 'black'
               }}
             />
-            <p 
-            style={{
-              fontSize: mobile ? '0.5em' : '0.75em',
-            }}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-              magnis dis parturient montes, nascetur ridiculus mus. 
-            </p>
+                        <Header
+              as='h4'
+              content='Full-time flaneur: Philosophy, Business, Macro.'
+              textAlign='left'
+              style={{
+                fontSize: mobile ? '0.75em' : '1em',
+                fontWeight: 'normal',
+                margin: '0em',
+                color: 'black'
+              }}
+            />
             <Container>
               <Icon name='twitter' />
               <Icon name='github' />
               <Icon name='mail' />
+              <Icon name='youtube' />
+              <Icon name='linkedin' />
             </Container>
           </Grid.Column>
         </Grid.Row>

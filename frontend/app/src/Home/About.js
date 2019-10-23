@@ -11,7 +11,7 @@ export const About = () => {
                     <Grid.Row>
                     <Grid.Column>
                         <p>Software Engineering</p>
-                        <p>-Bullet points of skills</p>
+                        <p>-Python</p>
                     </Grid.Column>
                     <Grid.Column>
                         <p>Current Ventures</p>
