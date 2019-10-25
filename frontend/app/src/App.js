@@ -1,7 +1,6 @@
 import React, { useEffect, useState} from 'react';
-import { Route, Link, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import ResponsiveContainer from './common/ResponsiveContainer';
-import { NavBar } from './common/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './home/Home';
 import Posts from './posts/Posts';
@@ -35,7 +34,6 @@ return (
     <Router>
       <div className="App">
         <ResponsiveContainer>
-          <NavBar />
           <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/posts" component={Posts} />

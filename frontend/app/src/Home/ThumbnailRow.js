@@ -19,11 +19,8 @@ export const ThumbnailRow = ({ posts }) => {
             }}
         >
         <Header as='h4'>Recent Posts</Header>
-        <Grid columns={4} stackable centered >
+        <Grid columns={3} stackable centered >
             <Grid.Row centered>
-            <Grid.Column>
-                <Thumbnail />
-            </Grid.Column>
             <Grid.Column>
                 <Thumbnail />
             </Grid.Column>
