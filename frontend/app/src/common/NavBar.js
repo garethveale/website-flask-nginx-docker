@@ -3,10 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 
 export const NavBar = ({ activeItem }) => {
     const linkStyle = {
-        color: 'black',
+        color: 'white',
+        fontSize: '0.8em'
     }
     const navStyle = {
-        padding: '1em'
+        padding: '1em',
     }
 
     return (

@@ -2,6 +2,13 @@ import React from 'react';
 import { Container, Grid, Header, List } from 'semantic-ui-react';
 
 export const About = () => {
+    const aboutTextStyle = {
+        fontWeight: '500',
+      };
+    const textStyle = {
+        fontWeight: '400',
+        fontSize: '0.8em'
+      };
     return (
             <Container style={{
                 margin: '3em',
@@ -10,9 +17,6 @@ export const About = () => {
                 {`
                 p {
                     align-content: center;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
                     min-height: 6em;
                 }
                 p > span {
@@ -22,8 +26,8 @@ export const About = () => {
                 }
                 `}
                 </style>
-                <Header as='h3'>About Me</Header>
-                <p>I'm Gareth. Software Engineer at JP Morgan, working
+                <Header as='h3'>ABOUT ME</Header>
+                <p  style={aboutTextStyle}>I'm Gareth. Software Engineer at JP Morgan, working
                 in trading and risk management. Enjoy building software, solving problems, and
                 learning. Interested in business, finance and macroeconomics. Student of philosophy and life.</p>
                 
@@ -32,37 +36,37 @@ export const About = () => {
                     <Grid.Column>
                         <Header as='h6' centered>Software Engineering</Header>
                         <List as='ul'>
-                            <List.Item as='li'>Python</List.Item>
-                            <List.Item as='li'>C++</List.Item>
-                            <List.Item as='li'>Javascript/React and ReactNative</List.Item>
-                            <List.Item as='li'>Linux Programming</List.Item>
-                            <List.Item as='li'>Containers/Docker</List.Item>
+                            <List.Item as='li' style={textStyle}>Python</List.Item>
+                            <List.Item as='li' style={textStyle}>C++</List.Item>
+                            <List.Item as='li' style={textStyle}>Javascript/React and ReactNative</List.Item>
+                            <List.Item as='li' style={textStyle}>Linux Programming</List.Item>
+                            <List.Item as='li' style={textStyle}>Containers/Docker</List.Item>
                          </List>
                     </Grid.Column>
                     <Grid.Column>
                         <Header as='h6' centered>Future Ventures/Self-Study</Header>
                         <List as='ul'>
-                            <List.Item as='li'>Data science</List.Item>
-                            <List.Item as='li'>Games programming</List.Item>
-                            <List.Item as='li'>Macroeconomics</List.Item>
-                            <List.Item as='li'>Low level programming</List.Item>
+                            <List.Item as='li' style={textStyle}>Data science</List.Item>
+                            <List.Item as='li' style={textStyle}>Games programming</List.Item>
+                            <List.Item as='li' style={textStyle}>Macroeconomics</List.Item>
+                            <List.Item as='li' style={textStyle}>Low level programming</List.Item>
                          </List>
                     </Grid.Column>
                     <Grid.Column>
                         <Header as='h6' centered>Achievements/Publications</Header>
                         <List as='ul'>
-                            <List.Item as='li'>1st Class Bachelors Degree: Information Technology</List.Item>
-                            <List.Item as='li'>University Scholarship</List.Item>
-                            <List.Item as='li'>Macroeconomics</List.Item>
-                            <List.Item as='li'>HCI 2019 Paper</List.Item>
+                            <List.Item as='li' style={textStyle}>1st Class Honors Information Technology</List.Item>
+                            <List.Item as='li' style={textStyle}>University Scholarship</List.Item>
+                            <List.Item as='li' style={textStyle}>HCI 2019 Paper</List.Item>
                          </List>
                     </Grid.Column>
                     <Grid.Column>
                         <Header as='h6' centered>Hobbies</Header>
                         <List as='ul'>
-                            <List.Item as='li'>Ultramarathon Running</List.Item>
-                            <List.Item as='li'>Reading</List.Item>
-                            <List.Item as='li'>Writing</List.Item>
+                            <List.Item as='li' style={textStyle}>Ultramarathon Running</List.Item>
+                            <List.Item as='li' style={textStyle}>Weightlifting</List.Item>
+                            <List.Item as='li' style={textStyle}>Reading</List.Item>
+                            <List.Item as='li' style={textStyle}>Writing</List.Item>
                          </List>
                     </Grid.Column>
                     </Grid.Row>

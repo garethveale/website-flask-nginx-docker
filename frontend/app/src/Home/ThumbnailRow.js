@@ -18,7 +18,7 @@ export const ThumbnailRow = ({ posts }) => {
             paddingTop: '2em'
             }}
         >
-        <Header as='h4'>Recent Posts</Header>
+        <Header as='h3'>RECENT POSTS</Header>
         <Grid columns={3} stackable centered >
             <Grid.Row centered>
             <Grid.Column>
