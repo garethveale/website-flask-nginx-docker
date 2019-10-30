@@ -27,8 +27,7 @@ export const About = () => {
                 `}
                 </style>
                 <Header as='h3'>ABOUT ME</Header>
-                <p  style={aboutTextStyle}>I'm Gareth. Software Engineer at JP Morgan, working
-                in trading and risk management. Enjoy building software, solving problems, and
+                <p  style={aboutTextStyle}>I'm Gareth. Software Engineer at JP Morgan. I enjoy building software, solving problems, and
                 learning. Interested in business, finance and macroeconomics. Student of philosophy and life.</p>
                 
                 <Grid columns={4} stackable centered textAlign='center'>
