@@ -3,10 +3,11 @@ import { Card, Image } from 'semantic-ui-react';
 
 export const Thumbnail = ({ activeItem }) => {
     return (
-        <Card centered>
+        <div style={{ height: '15em', width: '15em', padding:'2em', paddingTop: '0.2em' }}>
+        <Card centered fluid textAlign='center'>
             <Image 
                 src='https://react.semantic-ui.com/images/avatar/large/matthew.png' 
-                wrapped ui={false} small />
+                wrapped ui={false}/>
             <Card.Content>
             <Card.Header>Post Title</Card.Header>
             <Card.Meta>
@@ -14,5 +15,6 @@ export const Thumbnail = ({ activeItem }) => {
             </Card.Meta>
             </Card.Content>
         </Card>
+        </div>
     )
 }

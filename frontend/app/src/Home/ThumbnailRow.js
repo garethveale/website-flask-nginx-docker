@@ -15,19 +15,23 @@ export const ThumbnailRow = ({ posts }) => {
     return (
         <Container
             style ={{ 
-            paddingTop: '2em'
+            paddingTop: '2em',
+            paddingBottom: '2em'
             }}
         >
         <Header as='h3'>RECENT POSTS</Header>
-        <Grid columns={3} stackable centered >
+        <Grid columns={4} stackable container style={{ padding:'3em' }}>
             <Grid.Row centered>
-            <Grid.Column>
+            <Grid.Column centered>
                 <Thumbnail />
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column centered>
                 <Thumbnail />
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column centered>
+                <Thumbnail />
+            </Grid.Column>
+            <Grid.Column centered>
                 <Thumbnail />
             </Grid.Column>
             </Grid.Row>
