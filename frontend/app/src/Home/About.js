@@ -34,7 +34,7 @@ export const About = () => {
                 </style>
                 <Header as='h3'>ABOUT ME</Header>
                 <Container text>
-                <p  style={aboutTextStyle}>I'm Gareth. Software Engineer at JP Morgan. I enjoy building software, solving problems, and
+                <p  style={aboutTextStyle}>I'm Gareth. I'm a Software Engineer and enjoy building software, solving problems, and
                 learning. Interested in business, self-improvement, finance and macroeconomics. Student of philosophy and life.
                 Weightlifting and pushing myself daily.</p>
                 </Container>
@@ -55,13 +55,14 @@ export const About = () => {
                         <List>
                             <List.Item style={subHeading}>Tools</List.Item>
                             <List.Item style={textStyle}>Linux Programming</List.Item>
+                            <List.Item style={textStyle}>Nginx</List.Item>
                             <List.Item style={textStyle}>Containers/Docker</List.Item>
-                            <List.Item style={textStyle}>Microservices</List.Item>
+                            <List.Item style={textStyle}>Git</List.Item>
                          </List>
                     </Grid.Column>
                     <Grid.Column textAlign='center'>
                         <Icon name='book' size='large' style={{ color:'#E71D36' }}/>
-                        <Header as='h6' centered>Self-Study</Header>
+                        <Header as='h6' centered>Current Ventures</Header>
                         <List>
                             <List.Item style={subHeading}>CS</List.Item>
                             <List.Item style={textStyle}>Data science</List.Item>

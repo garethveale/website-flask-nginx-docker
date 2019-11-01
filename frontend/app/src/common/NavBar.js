@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 
-export const NavBar = ({ activeItem }) => {
+export const NavBar = ({ color }) => {
     const linkStyle = {
         color:'#FDFFFC',
         fontSize: '0.8em',
