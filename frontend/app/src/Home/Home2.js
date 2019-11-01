@@ -1,7 +1,6 @@
 import React from 'react';
 import { HomeHeading } from './HomeHeading';
 import { ThumbnailRow } from './ThumbnailRow';
-import { About } from './About';
 import { Footer } from '../common/Footer';
 import { NavBar } from '../common/NavBar';
 

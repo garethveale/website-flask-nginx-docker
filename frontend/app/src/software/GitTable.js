@@ -1,26 +1,38 @@
 import React from 'react';
 import { Icon, Table, Container, Header } from 'semantic-ui-react';
 
-const GitTable = () => (
+const GitTable = () => {
+    return (
     <Container
         style ={{ 
             paddingTop: '2em',
+            backgroundColor: '#011627',
         }}
     >
-        <Header as='h4'>Recent Projects</Header>
+
         <Table celled striped>
             <Table.Header>
             <Table.Row>
-                <Table.HeaderCell colSpan='3'>Git Repository</Table.HeaderCell>
+                <Table.HeaderCell colSpan='1'>Title</Table.HeaderCell>
+                <Table.HeaderCell colSpan='1'>Description</Table.HeaderCell>
+                <Table.HeaderCell colSpan='1'>Language</Table.HeaderCell>
+                <Table.HeaderCell colSpan='1'>Commits</Table.HeaderCell>
+                <Table.HeaderCell colSpan='1'>Size</Table.HeaderCell>
             </Table.Row>
             </Table.Header>
 
             <Table.Body>
             <Table.Row>
                 <Table.Cell collapsing>
-                <Icon name='folder' /> node_modules
+                    <Icon name='folder' /> node_modules
                 </Table.Cell>
                 <Table.Cell>Initial commit</Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
                 <Table.Cell collapsing textAlign='right'>
                 10 hours ago
                 </Table.Cell>
@@ -31,6 +43,12 @@ const GitTable = () => (
                 </Table.Cell>
                 <Table.Cell>Initial commit</Table.Cell>
                 <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
             </Table.Row>
             <Table.Row>
                 <Table.Cell>
@@ -38,6 +56,12 @@ const GitTable = () => (
                 </Table.Cell>
                 <Table.Cell>Initial commit</Table.Cell>
                 <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
             </Table.Row>
             <Table.Row>
                 <Table.Cell>
@@ -45,6 +69,12 @@ const GitTable = () => (
                 </Table.Cell>
                 <Table.Cell>Initial commit</Table.Cell>
                 <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
             </Table.Row>
             <Table.Row>
                 <Table.Cell>
@@ -52,10 +82,16 @@ const GitTable = () => (
                 </Table.Cell>
                 <Table.Cell>Initial commit</Table.Cell>
                 <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
+                <Table.Cell collapsing textAlign='right'>
+                10 hours ago
+                </Table.Cell>
             </Table.Row>
             </Table.Body>
         </Table>
     </Container>
-)
+)}
 
 export default GitTable;

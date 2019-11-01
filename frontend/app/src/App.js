@@ -35,7 +35,6 @@ function App() {
 return (
     <Router>
       <div className="App">
-
           <Switch>
               <Route exact path="/" component={Home2} />
               <Route path="/posts" component={Posts} />

@@ -1,16 +1,15 @@
 import React from 'react';
-import { PageHeading } from '../common/PageHeading';
-import AnotherGridLayout from '../common/AnotherGridLayout';
+import { NavBar } from '../common/NavBar';
+import { AboutSection } from './AboutSection';
 import { Container, Divider } from 'semantic-ui-react';
 
 class About extends React.Component {
   render() {
     return (
-    <Container>
-      <PageHeading title='About' />
-      <Divider />
-      <AnotherGridLayout />
-    </Container>
+    <div style={{ backgroundColor: '#011627', height: '100vh' }}>
+      <NavBar color='light'/>
+      <p style={{ color:'white' }}>TIMELINE WITH DARK BACKGROUND</p>
+    </div>
     )
   }
 }

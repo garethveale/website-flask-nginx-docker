@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Header, List, Segment, Icon } from 'semantic-ui-react';
 
-export const About = () => {
+export const AboutSection = () => {
     const aboutTextStyle = {
         fontWeight: '400',
         padding: '1em'
