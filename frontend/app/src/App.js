@@ -8,6 +8,7 @@ import Posts from './posts/Posts';
 import Contact from './contact/Contact';
 import Software from './software/Software';
 import Post from './posts/Post';
+import About from './about/About';
 import Notfound from './common/NotFound'
 
 function App() {
@@ -41,6 +42,7 @@ return (
               <Route path="/post/:slug" component={Post} />
               <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
+              <Route path="/about" component={About} />
               <Route component={Notfound} />
           </Switch>
 

@@ -6,10 +6,11 @@ import { Container, Header, Grid, Image, Icon, Form, Segment } from 'semantic-ui
 export const HomeHeading = ({ mobile }) => {
     const textStyle = {
         color: '#FDFFFC',
-        marginTop:'0.5em'
+        marginTop:'0.5em',
       };
-    const boldStyle = {
+    const linkStyle = {
         color: '#FF9F1C',
+        textDecoration: 'none'
     }
     return (
 
@@ -29,15 +30,19 @@ export const HomeHeading = ({ mobile }) => {
                   color: '#FDFFFC',
                 }}
             />           
-            <p style={textStyle}>I'm a self learning software engineer. I enjoy building things, solving problems, and am hungry for knowledge. I'm interested in business, self-improvement, finance and macroeconomics. Student of philosophy and life. Pushing myself daily.
-            Feel free to <b style={boldStyle}>read more</b> about me. Check out my <b style={boldStyle}>software projects</b>. Or read my <b style={boldStyle}>blog posts.</b></p>
+            <p style={textStyle}>I'm a self learning software engineer. I enjoy building things, solving problems, and am hungry for knowledge. 
+            I'm interested in business, self-improvement, finance and macroeconomics. Student of philosophy and life. Pushing myself daily.
+            Feel free to <b><a href='/about' style={linkStyle}>read more </a></b>
+            about me. Check out my <b><a href='/software' style={linkStyle}>software projects</a></b>. 
+            Or read my <b><a href='/posts' style={linkStyle}>blog posts.</a></b></p>
+            
             <Container textAlign='center' style={{ paddingTop: '1em' }}>
-                <Icon size='big' name='twitter' style={{color:'#FDFFFC'}} />
-                <Icon size='big' name='github' style={{color:'#FDFFFC'}} />
-                <Icon size='big' name='mail' style={{color:'#FDFFFC'}} />
-                <Icon size='big' name='youtube' style={{color:'#FDFFFC'}} />
-                <Icon size='big' name='twitch' style={{color:'#FDFFFC'}} />
-                <Icon size='big' name='linkedin' style={{color:'#FDFFFC'}} />
+              <a href='https://twitter.com/garethveale' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}><Icon size='big' name='twitter' link style={{color:'#FDFFFC'}}></Icon></a>
+              <a href='https://github.com/garethiv' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='github' link style={{color:'#FDFFFC'}} /></a>
+              <a href='' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='mail' link style={{color:'#FDFFFC'}} /></a>
+              <a href='https://www.youtube.com/channel/UCN71dsoRmbKXWWihXB2VOqw/featured?view_as=subscriber' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='youtube' link style={{color:'#FDFFFC'}} /></a>
+              <a href='https://www.twitch.tv/garethv' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='twitch' link style={{color:'#FDFFFC'}} /></a>
+              <a href='https://www.linkedin.com/in/garethveale/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='linkedin' link style={{color:'#FDFFFC'}} /></a>
             </Container>
         </Segment>
       </Form>
