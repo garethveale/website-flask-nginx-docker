@@ -5,7 +5,7 @@ import { Container, Header, Grid, Image, Icon } from 'semantic-ui-react';
 
 export const HomepageHeading = ({ mobile }) => (
   <div style={{ backgroundColor: '#011627' }}>
-    <NavBar />
+    <NavBar color='light' />
     <Container  textAlign='center' style={{ height: '50vh', }} >
     <Container verticalAlign='middle' style={{ paddingTop: '10vh' }}>
       <Header

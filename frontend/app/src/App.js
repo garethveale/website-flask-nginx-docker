@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import ResponsiveContainer from './common/ResponsiveContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './home/Home';
+import Home2 from './home/Home2';
 import Posts from './posts/Posts';
 import Contact from './contact/Contact';
 import Software from './software/Software';
@@ -33,16 +34,16 @@ function App() {
 return (
     <Router>
       <div className="App">
-        <ResponsiveContainer>
+
           <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Home2} />
               <Route path="/posts" component={Posts} />
               <Route path="/post/:slug" component={Post} />
               <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
               <Route component={Notfound} />
           </Switch>
-        </ResponsiveContainer>  
+
       </div>
     </Router>
 

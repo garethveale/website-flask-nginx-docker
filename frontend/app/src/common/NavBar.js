@@ -1,9 +1,10 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
+import { checkPropTypes } from 'prop-types';
 
 export const NavBar = ({ color }) => {
     const linkStyle = {
-        color:'#FDFFFC',
+        color: color == 'light' ? '#FDFFFC' : 'black',
         fontSize: '0.8em',
         fontWeight: '500'
     }
