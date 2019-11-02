@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavBar } from '../common/NavBar';
-import { Container, Header, Grid, Image, Icon, Form, Segment } from 'semantic-ui-react';
+import Emoji from '../common/Emoji';
+import { Container, Header, Grid, Icon, Form, Segment } from 'semantic-ui-react';
 // TODO: Pass mobile down as props
 
 export const HomeHeading = ({ mobile }) => {
@@ -31,7 +31,7 @@ export const HomeHeading = ({ mobile }) => {
                 }}
             />           
             <p style={textStyle}>I'm a self learning software engineer. I enjoy building things, solving problems, and am hungry for knowledge. 
-            I'm interested in business, self-improvement, finance and macroeconomics. Student of philosophy and life. Pushing myself daily.
+            I'm interested in business, self-improvement, finance and macroeconomics. Student of philosophy and life. Pushing myself daily <Emoji symbol="💪" label="strong"/>.
             Feel free to <b><a href='/about' style={linkStyle}>read more </a></b>
             about me. Check out my <b><a href='/software' style={linkStyle}>software projects</a></b>. 
             Or read my <b><a href='/posts' style={linkStyle}>blog posts.</a></b></p>
@@ -39,7 +39,7 @@ export const HomeHeading = ({ mobile }) => {
             <Container textAlign='center' style={{ paddingTop: '1em' }}>
               <a href='https://twitter.com/garethveale' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}><Icon size='big' name='twitter' link style={{color:'#FDFFFC'}}></Icon></a>
               <a href='https://github.com/garethiv' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='github' link style={{color:'#FDFFFC'}} /></a>
-              <a href='' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='mail' link style={{color:'#FDFFFC'}} /></a>
+              <a href='/contact' style={{ textDecoration: 'none' }}>  <Icon size='big' name='mail' link style={{color:'#FDFFFC'}} /></a>
               <a href='https://www.youtube.com/channel/UCN71dsoRmbKXWWihXB2VOqw/featured?view_as=subscriber' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='youtube' link style={{color:'#FDFFFC'}} /></a>
               <a href='https://www.twitch.tv/garethv' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='twitch' link style={{color:'#FDFFFC'}} /></a>
               <a href='https://www.linkedin.com/in/garethveale/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='linkedin' link style={{color:'#FDFFFC'}} /></a>

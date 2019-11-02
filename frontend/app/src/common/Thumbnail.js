@@ -1,20 +1,29 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Container, Image } from 'semantic-ui-react';
 
 export const Thumbnail = ({ activeItem }) => {
+    const title = {
+        fontWeight: '700',
+        fontSize: '0.8em',
+        color: 'black',
+        paddingLeft: '2em',
+        paddingRight: '2em',
+    }
+    const subtitle = {
+        fontWeight: '400',
+        fontSize: '0.8em',
+        color: 'black',
+        paddingLeft: '2em',
+        paddingRight: '2em',
+    }
+
     return (
-        <div style={{ height: '15em', width: '15em', padding:'2em', paddingTop: '0.2em' }}>
-        <Card centered fluid textAlign='center'>
-            <Image 
+        <Container>
+            <Image size='small' centered
                 src='https://react.semantic-ui.com/images/avatar/large/matthew.png' 
-                wrapped ui={false}/>
-            <Card.Content>
-            <Card.Header>Post Title</Card.Header>
-            <Card.Meta>
-                <span className='date'>SubHead</span>
-            </Card.Meta>
-            </Card.Content>
-        </Card>
-        </div>
+            />
+            <p style={title}>Title</p>
+            <p style={subtitle}>This is a subtitle and should be a short introduction to the post.</p>
+        </Container>
     )
 }

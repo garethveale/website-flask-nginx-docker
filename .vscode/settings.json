@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/Gareth/miniconda3/envs/myWebsiteEnv/bin/python",
+    "python.pythonPath": "C:\\Users\\Gareth\\Anaconda3\\envs\\myWebsiteEnv\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
     "python.linting.pycodestyleEnabled": true,

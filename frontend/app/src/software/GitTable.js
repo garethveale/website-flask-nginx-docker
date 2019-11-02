@@ -1,96 +1,49 @@
 import React from 'react';
-import { Icon, Table, Container, Header } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
+import Table from 'react-bootstrap/Table';
 
 const GitTable = () => {
     return (
     <Container
         style ={{ 
-            paddingTop: '2em',
-            backgroundColor: '#011627',
+            paddingTop: '3em',
         }}
     >
-
-        <Table celled striped>
-            <Table.Header>
-            <Table.Row>
-                <Table.HeaderCell colSpan='1'>Title</Table.HeaderCell>
-                <Table.HeaderCell colSpan='1'>Description</Table.HeaderCell>
-                <Table.HeaderCell colSpan='1'>Language</Table.HeaderCell>
-                <Table.HeaderCell colSpan='1'>Commits</Table.HeaderCell>
-                <Table.HeaderCell colSpan='1'>Size</Table.HeaderCell>
-            </Table.Row>
-            </Table.Header>
-
-            <Table.Body>
-            <Table.Row>
-                <Table.Cell collapsing>
-                    <Icon name='folder' /> node_modules
-                </Table.Cell>
-                <Table.Cell>Initial commit</Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-                <Table.Cell>
-                <Icon name='folder' /> test
-                </Table.Cell>
-                <Table.Cell>Initial commit</Table.Cell>
-                <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-                <Table.Cell>
-                <Icon name='folder' /> build
-                </Table.Cell>
-                <Table.Cell>Initial commit</Table.Cell>
-                <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-                <Table.Cell>
-                <Icon name='file outline' /> package.json
-                </Table.Cell>
-                <Table.Cell>Initial commit</Table.Cell>
-                <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-                <Table.Cell>
-                <Icon name='file outline' /> Gruntfile.js
-                </Table.Cell>
-                <Table.Cell>Initial commit</Table.Cell>
-                <Table.Cell textAlign='right'>10 hours ago</Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-                <Table.Cell collapsing textAlign='right'>
-                10 hours ago
-                </Table.Cell>
-            </Table.Row>
-            </Table.Body>
-        </Table>
+    <Header as='h3'>Software Repositories</Header>
+    <Table responsive striped hover size="sm">
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Language</th>
+            <th>Commits</th>
+            <th>Size</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            </tr>
+            <tr>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            </tr>
+            <tr>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            </tr>
+        </tbody>
+    </Table>
     </Container>
 )}
 

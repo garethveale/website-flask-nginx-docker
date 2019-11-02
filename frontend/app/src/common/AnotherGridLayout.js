@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Header } from 'semantic-ui-react'
+import { Container, Grid, Header, Image } from 'semantic-ui-react'
 
 const AnotherGridLayout = () => (
   <Container>
@@ -28,16 +28,24 @@ const AnotherGridLayout = () => (
     <Grid columns={4} stackable>
       <Grid.Row>
         <Grid.Column>
-          <p />
+          <Image size='small' centered
+                src='https://react.semantic-ui.com/images/avatar/large/matthew.png' 
+                />
         </Grid.Column>
         <Grid.Column>
-          <p />
+        <Image size='small' centered
+                src='https://react.semantic-ui.com/images/avatar/large/matthew.png' 
+                />
         </Grid.Column>
         <Grid.Column>
-          <p />
+        <Image size='small' centered
+                src='https://react.semantic-ui.com/images/avatar/large/matthew.png' 
+                />
         </Grid.Column>
         <Grid.Column>
-          <p />
+        <Image size='small' centered
+                src='https://react.semantic-ui.com/images/avatar/large/matthew.png' 
+                />
         </Grid.Column>
       </Grid.Row>
     </Grid>

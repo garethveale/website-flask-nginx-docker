@@ -1,18 +1,16 @@
 import React from 'react';
-import { PageHeading } from '../common/PageHeading';
-import AnotherGridLayout from '../common/AnotherGridLayout';
-import { Container, Divider } from 'semantic-ui-react';
+import { HomeHeading } from '../home/HomeHeading';
+import { NavBar } from '../common/NavBar';
 
-class Contact extends React.Component {
-  render() {
-    return (
-    <Container>
-      <PageHeading title='Contact' />
-      <Divider />
-      <AnotherGridLayout />
-    </Container>
-    )
-  }
+class Home2 extends React.Component {
+    render() {
+      return (
+        <div style={{ backgroundColor: '#011627', height: '100vh' }}>
+            <NavBar color='light' />
+            <HomeHeading />
+        </div>
+      )
+    }
 }
 
-export default Contact;
+export default Home2;

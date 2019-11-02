@@ -1,14 +1,15 @@
 import React from 'react';
-import { NavBar } from '../common/NavBar';
-import { AboutSection } from './AboutSection';
-import { Container, Divider } from 'semantic-ui-react';
+import { PageHeading } from '../common/PageHeading';
+import { Footer } from '../common/Footer';
+import { Time } from './Time';
 
 class About extends React.Component {
   render() {
     return (
-    <div style={{ backgroundColor: '#011627', height: '100vh' }}>
-      <NavBar color='light'/>
-      <p style={{ color:'white' }}>TIMELINE WITH DARK BACKGROUND</p>
+    <div style={{ height: '100vh' }}>
+      <PageHeading title='About me' />
+      <Time />
+      <Footer />
     </div>
     )
   }

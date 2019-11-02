@@ -1,10 +1,9 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-import { checkPropTypes } from 'prop-types';
 
 export const NavBar = ({ color }) => {
     const linkStyle = {
-        color: color == 'light' ? '#FDFFFC' : 'black',
+        color: color === 'light' ? '#FDFFFC' : 'black',
         fontSize: '0.8em',
         fontWeight: '500'
     }
@@ -22,7 +21,7 @@ export const NavBar = ({ color }) => {
                 <Nav.Link style={linkStyle} href='/software'>SOFTWARE</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link style={linkStyle} href='/posts'>POSTS</Nav.Link>
+                <Nav.Link style={linkStyle} href='/posts'>NOTES</Nav.Link>
             </Nav.Item>
             <Nav.Item>
                 <Nav.Link style={linkStyle} href='/about'>ABOUT</Nav.Link>
