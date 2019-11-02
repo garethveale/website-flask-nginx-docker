@@ -1,0 +1,18 @@
+FRONT END
+
+HOME
+-email button link to contact me 
+
+SOFTWARE
+-software github table
+-tech stack section
+
+POSTS
+-list of posts page, render only a certain amount of items
+-post detail page
+
+ABOUT
+-about page
+
+CONTACT 
+-contact form/layout
