@@ -62,7 +62,7 @@ class Software extends React.Component {
             </Grid.Row>
         </Grid>
       </Container>
-      <Footer />
+
     </div>
     )
   }
