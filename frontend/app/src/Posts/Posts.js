@@ -33,25 +33,6 @@ class Posts extends React.Component {
               </Grid.Column>
               </Grid.Row>
           </Grid>
-
-        <Header as='h3'>Book notes</Header>
-        <Divider />
-        <Grid columns={4} stackable container style={{ padding:'3em' }}>
-              <Grid.Row centered>
-              <Grid.Column centered>
-                  <Thumbnail />
-              </Grid.Column>
-              <Grid.Column centered>
-                  <Thumbnail />
-              </Grid.Column>
-              <Grid.Column centered>
-                  <Thumbnail />
-              </Grid.Column>
-              <Grid.Column centered>
-                  <Thumbnail />
-              </Grid.Column>
-              </Grid.Row>
-          </Grid>
         </Container>
         <Footer />
     </div>
