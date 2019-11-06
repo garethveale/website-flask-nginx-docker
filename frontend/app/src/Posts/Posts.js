@@ -8,11 +8,10 @@ class Posts extends React.Component {
   render() {
     return (
     <div style={{ height: '100vh' }}>
-      <PageHeading title='Notes' />
+      <PageHeading title='Notes' color='light' navColor='dark' />
       <Container
             style ={{ 
-            paddingTop: '2em',
-            paddingBottom: '2em'
+
             }}
         >
         <Header as='h3'>Posts</Header>
@@ -34,7 +33,6 @@ class Posts extends React.Component {
               </Grid.Row>
           </Grid>
         </Container>
-        <Footer />
     </div>
     )
   }

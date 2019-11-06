@@ -6,7 +6,7 @@ const GitTable = () => {
     return (
     <Container
         style ={{ 
-            paddingTop: '3em',
+
         }}
     >
     <Header as='h3'>Software Repositories</Header>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageHeading } from '../common/PageHeading';
 import GitTable from './GitTable';
+import BarChart from './BarChart';
 import { Footer } from '../common/Footer';
 import { Container, Divider, Grid, Header, List, Image } from 'semantic-ui-react';
 
@@ -15,29 +16,6 @@ class Software extends React.Component {
     return (
     <div style={{ height: '100vh' }}>
         <PageHeading title='Software' />
-        <GitTable />
-            
-        <Container style={{ margin:'2em' }} vertical textAlign='center'>
-            <Grid container stackable verticalAlign='middle'>
-                <Grid.Row>
-                <Grid.Column width={8} >
-                    <Header as='h6' centered style={{ color: 'black' }}>Software Engineering</Header>
-                    <Image size='large' src='skills.png' />
-                </Grid.Column>
-                <Grid.Column floated='right' width={6} textAlign='left'>
-                    <Header as='h6' centered style={{ color: 'black' }}>Future Ventures (teach myself)</Header>
-                    <List as='ul'> 
-                        <List.Item as='li' style={textStyle}>Low level programming</List.Item> 
-                        <List.Item as='li' style={textStyle}>C++</List.Item>             
-                        <List.Item as='li' style={textStyle}>Large data sets/Time series data</List.Item>       
-                        <List.Item as='li' style={textStyle}>Blockchain</List.Item> 
-                        <List.Item as='li' style={textStyle}>Machine Learning</List.Item>    
-                        <List.Item as='li' style={textStyle}> Scalable distributed systems (infrastructure, networks, microservices)</List.Item> 
-                    </List>
-                </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </Container>
 
         <Container style={{ margin:'2em' }} textAlign='center'>
             <Header as='h3' centered style={{ color: 'black' }}>Website Tech Stack</Header>
@@ -86,6 +64,31 @@ class Software extends React.Component {
                 </Grid.Row>
             </Grid>
       </Container>
+      
+        <GitTable />
+            
+        <Container style={{ margin:'2em' }} vertical textAlign='center'>
+            <Grid container stackable >
+                <Grid.Row>
+                <Grid.Column width={6} textAlign='center'>
+                    <Header as='h6' centered style={{}}>Software Engineering</Header>
+                    <BarChart />
+                </Grid.Column>
+                <Grid.Column floated='right' width={6} textAlign='left'>
+                    <Header as='h6' centered style={{ textAlign:'center' }}>Future Ventures (teach myself)</Header>
+                    <List as='ul'> 
+                        <List.Item as='li' style={textStyle}>Low level programming</List.Item> 
+                        <List.Item as='li' style={textStyle}>C++</List.Item>             
+                        <List.Item as='li' style={textStyle}>Large data sets/Time series data</List.Item>       
+                        <List.Item as='li' style={textStyle}>Blockchain</List.Item> 
+                        <List.Item as='li' style={textStyle}>Machine Learning</List.Item>    
+                        <List.Item as='li' style={textStyle}>Scalable distributed systems (infrastructure, networks, microservices)</List.Item>
+                        <List.Item as='li' style={textStyle}>Business</List.Item>  
+                    </List>
+                </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </Container>
       <Footer />
     </div>
     )
@@ -114,4 +117,16 @@ export default Software;
                 </Grid.Column>
                 </Grid.Row>
             </Grid>
+
+
+                    <List as='ul'> 
+                        <List.Item as='li' style={textStyle}>Python</List.Item> 
+                        <List.Item as='li' style={textStyle}>Javascript</List.Item>             
+                        <List.Item as='li' style={textStyle}>React</List.Item>       
+                        <List.Item as='li' style={textStyle}>Java</List.Item> 
+                        <List.Item as='li' style={textStyle}>Pandas</List.Item>    
+                        <List.Item as='li' style={textStyle}>SQL</List.Item> 
+                        <List.Item as='li' style={textStyle}>Linux</List.Item> 
+                    </List>
+
             */
