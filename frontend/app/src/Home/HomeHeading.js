@@ -31,9 +31,9 @@ export const HomeHeading = ({ mobile }) => {
                 }}
             />           
             <p style={textStyle}>I'm a self learning software engineer. I enjoy building things, solving problems, and am hungry for knowledge. 
-            I'm interested in business, self-improvement, finance and macroeconomics. Student of philosophy and life. Pushing myself daily <Emoji symbol="💪" label="strong"/>.
+            I'm interested in technology, business, and economics. Student of philosophy and life. Pushing myself daily <Emoji symbol="💪" label="strong"/>.
             Check out my <b><a href='/software' style={linkStyle}>software projects</a></b>. 
-            Read my <b><a href='/posts' style={linkStyle}>blog posts.</a></b></p>
+            Read my <b><a href='/posts' style={linkStyle}>notes.</a></b></p>
             
             <Container textAlign='center' style={{ paddingTop: '1em' }}>
               <a href='https://twitter.com/garethveale' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}><Icon size='big' name='twitter' link style={{color:'#FDFFFC'}}></Icon></a>
