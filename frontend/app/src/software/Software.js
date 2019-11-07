@@ -3,7 +3,7 @@ import { PageHeading } from '../common/PageHeading';
 import GitTable from './GitTable';
 import BarChart from './BarChart';
 import { Footer } from '../common/Footer';
-import { Container, Divider, Grid, Header, List, Image } from 'semantic-ui-react';
+import { Container, Divider, Grid, Header, List } from 'semantic-ui-react';
 
 class Software extends React.Component {
   render() {
@@ -67,7 +67,7 @@ class Software extends React.Component {
       
         <GitTable />
             
-        <Container style={{ margin:'2em' }} vertical textAlign='center'>
+        <Container style={{ margin:'2em' }} textAlign='center'>
             <Grid container stackable >
                 <Grid.Row>
                 <Grid.Column width={6} textAlign='center'>

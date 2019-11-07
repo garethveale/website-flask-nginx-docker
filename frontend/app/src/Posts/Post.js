@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageHeading } from '../common/PageHeading';
-import { Container, Divider, Grid, Header } from 'semantic-ui-react';
-import { Thumbnail } from '../common/Thumbnail';
+import { Container } from 'semantic-ui-react';
 import { Footer } from '../common/Footer';
 
 class Post extends React.Component {

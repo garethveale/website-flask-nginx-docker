@@ -1,8 +1,6 @@
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import ResponsiveContainer from './common/ResponsiveContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './home/Home';
 import Home2 from './home/Home2';
 import Posts from './posts/Posts';
 import Contact from './contact/Contact';
@@ -12,26 +10,6 @@ import About from './about/About';
 import Notfound from './common/NotFound'
 
 function App() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch('/posts').then(response => 
-      response.json().then(data => {
-        setPosts(data.posts);
-      })
-    );
-  }, []);
-
-  console.log(posts);
-    
-  /**return (
-    <div className="App">
-      <Container>
-        <Posts posts={ posts }/>
-      </Container>    
-    </div>
-  );
-}**/
 return (
     <Router>
       <div className="App">

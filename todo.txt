@@ -3,10 +3,13 @@ FRONT END
 HOME
 
 SOFTWARE
+-Git hub data into the table
 
 POSTS
--post detail page
-
-ABOUT
+-Post detail page
+-List the posts on the notes section
+-Display the post detail after clicking on a post - i.e. slug
 
 CONTACT 
+-Form validation
+-Send the contact form to my email
