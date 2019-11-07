@@ -3,7 +3,6 @@ import { PageHeading } from '../common/PageHeading';
 import { Container, Divider, Grid } from 'semantic-ui-react';
 import { Thumbnail } from '../common/Thumbnail';
 
-//class Posts extends React.Component {
 function Posts() {   
   const [posts, setPosts] = useState([]);
 

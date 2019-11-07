@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Image } from 'semantic-ui-react';
 
-export const Thumbnail = ({ activeItem }) => {
+export const Thumbnail = ({ props }) => {
     const title = {
         fontWeight: '700',
         fontSize: '0.8em',

@@ -22,7 +22,6 @@ return (
               <Route path="/about" component={About} />
               <Route component={Notfound} />
           </Switch>
-
       </div>
     </Router>
 

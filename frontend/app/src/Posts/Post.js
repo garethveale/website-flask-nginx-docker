@@ -1,24 +1,17 @@
 import React from 'react';
 import { PageHeading } from '../common/PageHeading';
-import { Container } from 'semantic-ui-react';
-import { Footer } from '../common/Footer';
+import { Container, Divider } from 'semantic-ui-react';
 
-class Post extends React.Component {
-  render() {
+function Post({ props }) {   
     return (
     <div style={{ height: '100vh' }}>
-      <PageHeading title='Post' />
-      <Container
-            style ={{ 
-            paddingTop: '2em',
-            paddingBottom: '2em'
-            }}
-        >
-        </Container>
-        <Footer />
-    </div>
-    )
-  }
-}
+      <PageHeading title='Post Detail Page' color='light' navColor='dark' />
+      <Container>
+        <Divider />
 
-export default Post;
+      </Container>
+    </div>
+      );
+    }
+  
+  export default Post;
