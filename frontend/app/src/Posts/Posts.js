@@ -14,7 +14,6 @@ class Posts extends React.Component {
 
             }}
         >
-        <Header as='h3'>Posts</Header>
         <Divider />
         <Grid columns={4} stackable container style={{ padding:'3em' }}>
               <Grid.Row centered>
