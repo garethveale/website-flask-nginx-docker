@@ -6,7 +6,6 @@ SOFTWARE
 -Git hub data into the table
 
 POSTS
--Post detail page
 -List the posts on the notes section
 -Display the post detail after clicking on a post - i.e. slug
 

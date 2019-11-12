@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React, { useEffect, useState} from 'react';
 import { PageHeading } from '../common/PageHeading';
 import { Container, Grid } from 'semantic-ui-react';
@@ -14,34 +15,33 @@ function Posts() {
     );
   }, []);
 
+  const columns = _.times(4, (i) => (
+    <Grid.Column key={i}>
+      <Thumbnail />
+    </Grid.Column>
+  ))
+
+/**            {posts.slice(0,3).map(post => {
+                return (
+                  <Grid.Column >
+                    <Thumbnail />
+                  </Grid.Column>
+                )
+            })}
+  */
+
   console.log(posts);
 
-  /**return (
-    <div className="App">
-      <Container>
-        <Posts posts={ posts }/>
-      </Container>    
-    </div>
-  );
-  }**/
   return (
   <div style={{ height: '100vh' }}>
     <PageHeading title='Notes' color='light' navColor='dark' />
     <Container>
       <Grid columns={4} stackable container style={{ padding:'2em' }}>
             <Grid.Row >
-            <Grid.Column >
-                <Thumbnail />
-            </Grid.Column>
-            <Grid.Column >
-                <Thumbnail />
-            </Grid.Column>
-            <Grid.Column >
-                <Thumbnail />
-            </Grid.Column>
-            <Grid.Column >
-                <Thumbnail />
-            </Grid.Column>
+              {columns}
+            </Grid.Row>
+            <Grid.Row >
+              {columns}
             </Grid.Row>
         </Grid>
       </Container>
