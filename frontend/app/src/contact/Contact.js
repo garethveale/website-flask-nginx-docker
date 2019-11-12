@@ -13,17 +13,19 @@ class Home2 extends React.Component {
             <Grid.Column style={{ maxWidth: 400 }}>
               <Form size='large'>
                 <Segment stacked>
-                  <Form.Input fluid placeholder='E-mail address' />
+                  <Form.Input fluid placeholder='E-mail address' style={{ fontSize: '0.75em' }}/>
                   <Form.Input
                     fluid
                     placeholder='Subject'
+                    style={{ fontSize: '0.75em' }}
                   />
                   <Form.TextArea
                     fluid
                     placeholder='Message'
+                    style={{ fontSize: '0.75em' }}
                   />
 
-                  <Button color='teal' fluid size='large'>
+                  <Button color='teal' fluid size='large' style={{ fontSize: '1em' }}>
                     Send
                   </Button>
                 </Segment>
