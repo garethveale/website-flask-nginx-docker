@@ -2,11 +2,6 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import {
   Container,
-  Divider,
-  Dropdown,
-  Grid,
-  Header,
-  Icon,
   Image,
   List,
   Menu,
@@ -19,8 +14,8 @@ const menuStyle = {
   borderRadius: 0,
   boxShadow: 'none',
   marginBottom: '1em',
-  marginTop: '4em',
   transition: 'box-shadow 0.5s ease, padding 0.5s ease',
+  boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
 }
 
 const fixedMenuStyle = {
@@ -28,47 +23,6 @@ const fixedMenuStyle = {
   border: '1px solid #ddd',
   boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
 }
-
-const overlayStyle = {
-  float: 'left',
-  margin: '0em 3em 1em 0em',
-}
-
-const fixedOverlayStyle = {
-  ...overlayStyle,
-  position: 'fixed',
-  top: '80px',
-  zIndex: 10,
-}
-
-const overlayMenuStyle = {
-  position: 'relative',
-  left: 0,
-  transition: 'left 0.5s ease',
-}
-
-const fixedOverlayMenuStyle = {
-  ...overlayMenuStyle,
-  left: '800px',
-}
-
-const LeftImage = () => (
-  <Image
-    floated='left'
-    size='medium'
-    src='/images/wireframe/square-image.png'
-    style={{ margin: '2em 2em 2em -4em' }}
-  />
-)
-
-const RightImage = () => (
-  <Image
-    floated='right'
-    size='medium'
-    src='/images/wireframe/square-image.png'
-    style={{ margin: '2em -4em 2em 2em' }}
-  />
-)
 
 const Paragraph = () => (
   <p>
@@ -136,9 +90,8 @@ export default class StickyLayout extends Component {
             style={menuFixed ? fixedMenuStyle : menuStyle}
           >
             <Container text>
-              <Menu.Item header>Project Name</Menu.Item>
-              <Menu.Item as='a'>Blog</Menu.Item>
-              <Menu.Item as='a'>Articles</Menu.Item>
+              <Menu.Item as='a' style={{ fontSize: '0.8em' }}>HOME</Menu.Item>
+              <Menu.Item as='a' style={{ fontSize: '0.8em' }}>NOTES</Menu.Item>
             </Container>
           </Menu>
         </Visibility>
@@ -148,57 +101,18 @@ export default class StickyLayout extends Component {
             <Paragraph key={i} />
           ))}
 
-          {/* Example with overlay menu is more complex, SUI simply clones all elements inside, but we should use a
-              different approach.
-              An empty Visibility element controls the need to change the fixing of element below, it also uses height
-              and width params received from its ref for correct display.
-            */}
-          <Visibility
-            offset={80}
-            once={false}
-            onTopPassed={this.stickOverlay}
-            onTopVisible={this.unStickOverlay}
-            style={overlayFixed ? { ...overlayStyle, ...overlayRect } : {}}
-          />
 
-          <div ref={this.handleOverlayRef} style={overlayFixed ? fixedOverlayStyle : overlayStyle}>
-            <Menu
-              icon='labeled'
-              style={overlayFixed ? fixedOverlayMenuStyle : overlayMenuStyle}
-              vertical
-            >
-              <Menu.Item>
-                <Icon name='twitter' />
-                Twitter
-              </Menu.Item>
-
-              <Menu.Item>
-                <Icon name='facebook' />
-                Share
-              </Menu.Item>
-
-              <Menu.Item>
-                <Icon name='mail' />
-                Email
-              </Menu.Item>
-            </Menu>
-          </div>
 
           {_.times(3, (i) => (
             <Paragraph key={i} />
           ))}
-          <LeftImage />
-
           <Paragraph />
-          <RightImage />
 
           {_.times(4, (i) => (
             <Paragraph key={i} />
           ))}
-          <LeftImage />
 
           <Paragraph />
-          <RightImage />
 
           {_.times(2, (i) => (
             <Paragraph key={i} />
@@ -207,7 +121,6 @@ export default class StickyLayout extends Component {
 
         <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
           <Container textAlign='center'>
-            <Image src='/logo.png' centered size='mini' />
             <List horizontal inverted divided link size='small'>
               <List.Item as='a' href='#'>
                 Site Map

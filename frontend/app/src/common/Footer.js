@@ -3,7 +3,7 @@ import { Segment, Container, Grid, Icon, Header } from 'semantic-ui-react';
 
 export const Footer = () => {
     return (
-        <Segment vertical inverted style={{ padding: '5em 0em', backgroundColor:'#011627' }}>
+        <Segment vertical inverted style={{ padding: '5em 0em', backgroundColor:'#011627', marginTop:'2em' }}>
             <Container>
                 <Grid stackable textAlign='center'>
                 <Grid.Row>

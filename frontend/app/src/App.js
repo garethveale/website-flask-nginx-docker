@@ -17,7 +17,7 @@ return (
           <Switch>
               <Route exact path="/" component={Home2} />
               <Route path="/posts" component={Posts} />
-              <Route path="/post/:slug" component={Post} />
+              <Route path="/post" component={Post} />
               <Route path="/posteg" component={StickyLayout} />
               <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
@@ -29,5 +29,5 @@ return (
 
   );
 }
-
+//<Route path="/post/:slug" component={Post} />
 export default App;

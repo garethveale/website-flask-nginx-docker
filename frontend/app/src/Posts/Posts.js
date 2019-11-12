@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { PageHeading } from '../common/PageHeading';
-import { Container, Divider, Grid } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 import { Thumbnail } from '../common/Thumbnail';
 
 function Posts() {   
@@ -28,8 +28,7 @@ function Posts() {
   <div style={{ height: '100vh' }}>
     <PageHeading title='Notes' color='light' navColor='dark' />
     <Container>
-      <Divider />
-      <Grid columns={4} stackable container style={{ padding:'3em' }}>
+      <Grid columns={4} stackable container style={{ padding:'2em' }}>
             <Grid.Row >
             <Grid.Column >
                 <Thumbnail />
