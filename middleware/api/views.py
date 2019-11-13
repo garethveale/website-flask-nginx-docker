@@ -23,12 +23,6 @@ def posts():
     return jsonify({'posts': posts})
 
 
-@app.route('/post/<slug>')
-def post(slug):
-    post = Post.query.filter_by(slug=slug).first_or_404()
-    return jsonify({'post': post})
-
-
 @app.route('/books')
 def book_notes():
     book_notes = []

@@ -5,11 +5,15 @@ HOME
 SOFTWARE
 -Git hub data into the table
 
-POSTS
--Display the post detail after clicking on a post - i.e. slug
--Pass down the data from db as props
--Format the post page nicely
-
 CONTACT
 -Form validation
 -Send the contact form to my email
+
+NOT FOUND
+-Cool not found page
+
+POSTS
+-Display the post detail after clicking on a post - i.e. slug
+-Pass down the data from db as props
+
+

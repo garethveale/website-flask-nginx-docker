@@ -21,10 +21,6 @@ export const NavBar = ({ color }) => {
                 <Nav.Link style={linkStyle} href='/software'>SOFTWARE</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link style={linkStyle} href='/posts'>NOTES</Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
                 <Nav.Link style={linkStyle} href='/contact'>CONTACT</Nav.Link>
             </Nav.Item>
         </Nav>
