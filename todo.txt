@@ -6,9 +6,10 @@ SOFTWARE
 -Git hub data into the table
 
 POSTS
--List the posts on the notes section
 -Display the post detail after clicking on a post - i.e. slug
+-Pass down the data from db as props
+-Format the post page nicely
 
-CONTACT 
+CONTACT
 -Form validation
 -Send the contact form to my email
