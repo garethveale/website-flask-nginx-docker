@@ -5,7 +5,7 @@ import Home2 from './home/Home2';
 import Contact from './contact/Contact';
 import Software from './software/Software';
 import About from './about/About';
-import Notfound from './common/NotFound'
+import NotFound from './common/NotFound'
 
 function App() {
 return (
@@ -16,7 +16,7 @@ return (
               <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
               <Route path="/about" component={About} />
-              <Route component={Notfound} />
+              <Route component={NotFound} />
           </Switch>
       </div>
     </Router>

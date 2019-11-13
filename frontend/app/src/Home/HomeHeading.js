@@ -46,16 +46,5 @@ export const HomeHeading = ({ mobile }) => {
       </Form>
     </Grid.Column>
   </Grid>
-)
+  )
 }
-/*<Header
-                as='h4'
-                content='Full-time flaneur: Philosophy, Business, Finance.'
-                textAlign='center'
-                style={{
-                  fontSize: '1em',
-                  fontWeight: 'normal',
-                  margin: '0em',
-                  color: '#FDFFFC'
-                }}
-            />*/

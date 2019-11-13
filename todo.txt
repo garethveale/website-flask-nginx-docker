@@ -1,21 +1,9 @@
-FRONT END
-
-HOME
-
 SOFTWARE
 -Git hub data into the table
 
 CONTACT
 -Form validation
 -Send the contact form to my email
-
-NOT FOUND
--Cool not found page
-
-
-
-
-
 
 Docker
 Database
