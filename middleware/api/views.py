@@ -14,6 +14,7 @@ def posts():
     for post in post_list:
         categories = [category.name for category in post.categories]
         posts.append({
+            'id': post.id,
             'title': post.title,
             'body': post.body,
             'categories': categories,

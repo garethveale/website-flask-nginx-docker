@@ -15,35 +15,23 @@ function Posts() {
     );
   }, []);
 
-  const columns = _.times(4, (i) => (
-    <Grid.Column key={i}>
-      <Thumbnail />
-    </Grid.Column>
-  ))
-
-/**            {posts.slice(0,3).map(post => {
-                return (
-                  <Grid.Column >
-                    <Thumbnail />
-                  </Grid.Column>
-                )
-            })}
-  */
-
   console.log(posts);
 
   return (
   <div style={{ height: '100vh' }}>
     <PageHeading title='Notes' color='light' navColor='dark' />
     <Container>
-      <Grid columns={4} stackable container style={{ padding:'2em' }}>
-            <Grid.Row >
-              {columns}
-            </Grid.Row>
-            <Grid.Row >
-              {columns}
-            </Grid.Row>
-        </Grid>
+      <Grid columns={4} stackable style={{ padding:'2em' }}>
+
+        {posts.map(post => {
+          return (
+            <Grid.Column key={post.id}>
+                <Thumbnail />
+            </Grid.Column>
+            )
+        })}
+
+      </Grid>
       </Container>
   </div>
     );
