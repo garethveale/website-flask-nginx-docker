@@ -53,4 +53,5 @@ def contact():
 @app.route('/software')
 def software():
     user = 'garethiv'
-    return git_stats(user)
+    git = git_stats(user)
+    return jsonify({'git': git})

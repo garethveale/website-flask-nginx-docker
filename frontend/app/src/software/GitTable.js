@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { Container, Header } from 'semantic-ui-react';
 import Table from 'react-bootstrap/Table';
 
-const GitTable = () => {
-    return (
-    <Container
-        style ={{ 
+function GitTable() {
 
-        }}
-    >
+
+    return (
+    <Container>
     <Header as='h3'>Software Repositories</Header>
     <Table responsive striped hover size="sm">
         <thead>

@@ -2,10 +2,8 @@ import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home2 from './home/Home2';
-import Posts from './posts/Posts';
 import Contact from './contact/Contact';
 import Software from './software/Software';
-import Post from './posts/Post';
 import About from './about/About';
 import Notfound from './common/NotFound'
 
@@ -25,5 +23,4 @@ return (
 
   );
 }
-//<Route path="/post/:slug" component={Post} />
 export default App;
