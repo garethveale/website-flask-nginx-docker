@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home2 from './home/Home2';
 import Contact from './contact/Contact';
 import Software from './software/Software';
-import About from './about/About';
 import NotFound from './common/NotFound'
 
 function App() {
@@ -15,7 +14,6 @@ return (
               <Route exact path="/" component={Home2} />
               <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
-              <Route path="/about" component={About} />
               <Route component={NotFound} />
           </Switch>
       </div>

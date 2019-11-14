@@ -1,6 +1,5 @@
 import React from 'react';
-import { PageHeading } from '../common/PageHeading';
-import { Container, Button, Header, Grid, Form, Segment } from 'semantic-ui-react';
+import { Header, Grid } from 'semantic-ui-react';
 
 
 class NotFound extends React.Component {
@@ -21,7 +20,6 @@ class NotFound extends React.Component {
                         }}
                     />           
             </Grid.Column>
-            
         </Grid>
         )
     }

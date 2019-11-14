@@ -4,6 +4,31 @@ import Table from 'react-bootstrap/Table';
 
 function GitTable() {
 
+    const [git, setPosts] = useState([]);
+
+    useEffect(() => {
+      fetch('/software').then(response => 
+        response.json().then(data => {
+          setPosts(data.git);
+        })
+      );
+    }, []);
+
+    console.log(git);
+
+    for (var p in git) {
+        if( git.hasOwnProperty(p) ) {
+          console.log(git[p]);
+       } 
+    }              
+
+    const headStyle = {
+
+    }
+    
+    const cellStyle = {
+        
+    }
 
     return (
     <Container>
@@ -19,30 +44,24 @@ function GitTable() {
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            </tr>
-            <tr>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            </tr>
-            <tr>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            </tr>
+
         </tbody>
     </Table>
     </Container>
 )}
 
 export default GitTable;
+/**
+ *             {git.map(repo => {
+                return (
+                    <tr key={repo.id}>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    </tr>
+                    )
+                })}
+ * 
+ */

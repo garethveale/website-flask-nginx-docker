@@ -1,5 +1,4 @@
 import React from 'react';
-import Emoji from '../common/Emoji';
 import { Container, Header, Grid, Icon, Form, Segment } from 'semantic-ui-react';
 // TODO: Pass mobile down as props
 
@@ -20,7 +19,7 @@ export const HomeHeading = ({ mobile }) => {
         <Segment stacked textAlign='center'  style={{ backgroundColor: '#011627' }} >
             <Header
                 as='h1'
-                content='Hello, my name is Gareth Veale.'
+                content='Gareth Veale.'
                 textAlign='center'
                 style={{
                   fontSize: '2em',
@@ -30,9 +29,9 @@ export const HomeHeading = ({ mobile }) => {
                   color: '#FDFFFC',
                 }}
             />           
-            <p style={textStyle}>I'm a self learning software engineer. I enjoy building things, solving problems, and am hungry for knowledge. 
-            I'm interested in technology, business, and economics. Student of philosophy and life. Pushing myself daily <Emoji symbol="💪" label="strong"/>.
-            Check out my <b><a href='/software' style={linkStyle}>software projects</a></b>.</p>
+            <p style={textStyle}>Self learning software engineer. I like building things, solving problems, and gaining knowledge. 
+            Technology, Business, and Economics. Student of philosophy/life. Pushing myself daily.
+            Check out my <b><a href='/software' style={linkStyle}>software</a></b>.</p>
             
             <Container textAlign='center' style={{ paddingTop: '1em' }}>
               <a href='https://twitter.com/garethveale' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}><Icon size='big' name='twitter' link style={{color:'#FDFFFC'}}></Icon></a>

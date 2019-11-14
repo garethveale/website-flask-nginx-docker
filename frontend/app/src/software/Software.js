@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import { PageHeading } from '../common/PageHeading';
 import GitTable from './GitTable';
 import BarChart from './BarChart';
@@ -11,70 +11,58 @@ function Software() {
         fontSize: '0.8em',
         color: 'black'
       };
-
-      const [git, setPosts] = useState([]);
-
-      useEffect(() => {
-        fetch('/software').then(response => 
-          response.json().then(data => {
-            setPosts(data.git);
-          })
-        );
-      }, []);
-
-      console.log(git);
     
     return (
     <div style={{ height: '100vh' }}>
         <PageHeading title='Software' />
 
-        <Container style={{ margin:'2em' }} textAlign='center'>
-            <Header as='h3' style={{ color: 'black' }}>Website Tech Stack</Header>
-            <Divider />
-            <Grid columns={6} stackable>
-                <Grid.Row >
-                    <Grid.Column textAlign='left'>
-                        <Header as='h6' style={{ color: 'black' }}>Front end</Header>
-                        <List as='ul'> 
-                            <List.Item as='li' style={textStyle}>Single page React web application</List.Item> 
-                            <List.Item as='li' style={textStyle}>Semantic UI React, React bootstrap and custom components</List.Item>       
-                        </List>
-                    </Grid.Column>
-                    <Grid.Column textAlign='left'>
-                        <Header as='h6' style={{ color: 'black' }}>Web server</Header>
-                        <List as='ul'>
-                            <List.Item as='li' style={textStyle}>Nginx proxy for handling incoming connections and requests</List.Item>
-                            <List.Item as='li' style={textStyle}>Load balancing</List.Item>
-                        </List>
-                    </Grid.Column>
-                    <Grid.Column textAlign='left'>
-                        <Header as='h6' style={{ color: 'black' }}>Web app</Header>
-                        <List as='ul'>
-                            <List.Item as='li' style={textStyle}>Python flask applicationa and API's for defining data models and processing requests</List.Item>
-                        </List>
-                    </Grid.Column>
-                    <Grid.Column textAlign='left'>
-                        <Header as='h6' style={{ color: 'black' }}>WSGI server</Header>
-                        <List as='ul'>
-                            <List.Item as='li' style={textStyle}>Gunicorn interface serving flask application</List.Item>
-                        </List>
-                    </Grid.Column>
-                    <Grid.Column textAlign='left'>
-                        <Header as='h6' style={{ color: 'black' }}>Database</Header>
-                        <List as='ul'>
-                            <List.Item as='li' style={textStyle}>SQLAlchemy ORM for translating python objects to relational data</List.Item>
-                            <List.Item as='li' style={textStyle}>PostgreSQL database</List.Item>
-                        </List>
-                    </Grid.Column>
-                    <Grid.Column textAlign='left'>
-                        <Header as='h6' style={{ color: 'black' }}>Deployment</Header>
-                        <List as='ul'>
-                            <List.Item as='li' style={textStyle}>UNKNOWN</List.Item>
-                        </List>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-      </Container>
+            <Container style={{ margin:'2em' }} textAlign='center'>
+                <Header as='h3' style={{ color: 'black' }}>Website Tech Stack</Header>
+                <Divider />
+                <Grid columns={6} stackable>
+                    <Grid.Row >
+                        <Grid.Column textAlign='left'>
+                            <Header as='h6' style={{ color: 'black' }}>Front end</Header>
+                            <List as='ul'> 
+                                <List.Item as='li' style={textStyle}>Single page React web application</List.Item> 
+                                <List.Item as='li' style={textStyle}>Semantic UI React, React bootstrap and custom components</List.Item>       
+                            </List>
+                        </Grid.Column>
+                        <Grid.Column textAlign='left'>
+                            <Header as='h6' style={{ color: 'black' }}>Web server</Header>
+                            <List as='ul'>
+                                <List.Item as='li' style={textStyle}>Nginx proxy for handling incoming connections and requests</List.Item>
+                                <List.Item as='li' style={textStyle}>Load balancing</List.Item>
+                            </List>
+                        </Grid.Column>
+                        <Grid.Column textAlign='left'>
+                            <Header as='h6' style={{ color: 'black' }}>Web app</Header>
+                            <List as='ul'>
+                                <List.Item as='li' style={textStyle}>Python flask applicationa and API's for defining data models and processing requests</List.Item>
+                            </List>
+                        </Grid.Column>
+                        <Grid.Column textAlign='left'>
+                            <Header as='h6' style={{ color: 'black' }}>WSGI server</Header>
+                            <List as='ul'>
+                                <List.Item as='li' style={textStyle}>Gunicorn interface serving flask application</List.Item>
+                            </List>
+                        </Grid.Column>
+                        <Grid.Column textAlign='left'>
+                            <Header as='h6' style={{ color: 'black' }}>Database</Header>
+                            <List as='ul'>
+                                <List.Item as='li' style={textStyle}>SQLAlchemy ORM for translating python objects to relational data</List.Item>
+                                <List.Item as='li' style={textStyle}>PostgreSQL database</List.Item>
+                            </List>
+                        </Grid.Column>
+                        <Grid.Column textAlign='left'>
+                            <Header as='h6' style={{ color: 'black' }}>Deployment</Header>
+                            <List as='ul'>
+                                <List.Item as='li' style={textStyle}>UNKNOWN</List.Item>
+                            </List>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+        </Container>
       
         <GitTable />
             
