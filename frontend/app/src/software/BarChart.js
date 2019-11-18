@@ -8,18 +8,40 @@ class BarChart extends React.Component {
     this.state = {
       options: {
         chart: {
-          id: "basic-bar"
+          id:'skills',
+          toolbar: {
+            show: false
+          },
         },
         xaxis: {
-          categories: ['Python', 'C++', 'JS', 'React', 'Java', 'SQL', 'Pandas', 'Linux']
-        }
+          categories: ['Python', 'C++', 'JS', 'React', 'Java', 'SQL', 'Pandas', 'Linux'],
+          axisBorder: {
+            color: "#333"
+          }
+        },
+        
+        dataLabels: {
+          style: {
+            colors: ['#FDFFFC']
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            gradientToColors: ['#F55555', '#6078ea', '#6094ea'],
+            type: "vertical",
+          },
+        },
+        colors: ['#FCCF31', '#17ead9', '#f02fc2'],
       },
       series: [
         {
           name: "skill level",
           data: [80, 20, 50, 60, 50, 50, 40, 50]
         }
-      ]
+      ],
+
     };
   }
 

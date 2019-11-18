@@ -13,7 +13,7 @@ export const HomeHeading = ({ mobile }) => {
     }
     return (
 
-    <Grid textAlign='center' style={{ height: '80vh' }} verticalAlign='middle'>
+    <Grid textAlign='center' style={{ height: '80vh', border: '0em' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 500 }}>
       <Form size='large'>
         <Segment stacked textAlign='center'  style={{ backgroundColor: '#011627' }} >

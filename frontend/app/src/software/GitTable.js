@@ -12,39 +12,42 @@ function GitTable() {
           setPosts(data.git);
         })
       );
-    }, []);
+    }, []);           
 
-    console.log(git);
-
-    for (var p in git) {
-        if( git.hasOwnProperty(p) ) {
-          console.log(git[p]);
-       } 
-    }              
+    var arr = [];
+    Object.keys(git).forEach(function(key) {
+      arr.push(git[key]);
+    });
 
     const headStyle = {
-
+      fontSize: '0.75em'
     }
     
     const cellStyle = {
-        
+      fontSize: '0.75em'
     }
 
     return (
-    <Container>
+    <Container style={{ paddingLeft:'5em', paddingRight:'5em', marginTop:'2em'}}>
     <Header as='h3'>Software Repositories</Header>
     <Table responsive striped hover size="sm">
         <thead>
             <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Language</th>
-            <th>Commits</th>
-            <th>Size</th>
+            <th style={headStyle}>Title</th>
+            <th style={headStyle}>Description</th>
+            <th style={headStyle}>Language</th>
+            <th style={headStyle}>Size</th>
             </tr>
         </thead>
-        <tbody>
-
+        <tbody>   
+          {arr.map(item => 
+            <tr key={item.id}>
+            <td style={cellStyle}>{item.name}</td>
+            <td style={cellStyle}>{item.description}</td>
+            <td style={cellStyle}>{item.language}</td>
+            <td style={cellStyle}>{item.size}</td>
+            </tr>
+          )}     
         </tbody>
     </Table>
     </Container>

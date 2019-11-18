@@ -12,17 +12,26 @@ function Software() {
         color: 'black'
       };
     
+    const subStyle = {
+        fontWeight: '600',
+        fontSize: '0.8em',
+        color: 'black'
+      };
     return (
     <div style={{ height: '100vh' }}>
         <PageHeading title='Software' />
 
+        <GitTable />
+
             <Container style={{ margin:'2em' }} textAlign='center'>
                 <Header as='h3' style={{ color: 'black' }}>Website Tech Stack</Header>
                 <Divider />
+                <p style={subStyle}>Scalable containerised web architecture for hosting multiple applications</p>
                 <Grid columns={6} stackable>
                     <Grid.Row >
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>Front end</Header>
+                            <p style={subStyle}>REACT</p>
                             <List as='ul'> 
                                 <List.Item as='li' style={textStyle}>Single page React web application</List.Item> 
                                 <List.Item as='li' style={textStyle}>Semantic UI React, React bootstrap and custom components</List.Item>       
@@ -30,41 +39,44 @@ function Software() {
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>Web server</Header>
+                            <p style={subStyle}>NGINX</p>
                             <List as='ul'>
-                                <List.Item as='li' style={textStyle}>Nginx proxy for handling incoming connections and requests</List.Item>
-                                <List.Item as='li' style={textStyle}>Load balancing</List.Item>
+                                <List.Item as='li' style={textStyle}>Nginx container proxy for handling incoming connections and requests</List.Item>
+                                <List.Item as='li' style={textStyle}>Connects each container to each other</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>Web app</Header>
+                            <p style={subStyle}>FLASK</p>
                             <List as='ul'>
                                 <List.Item as='li' style={textStyle}>Python flask applicationa and API's for defining data models and processing requests</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>WSGI server</Header>
+                            <p style={subStyle}>GUNICORN</p>
                             <List as='ul'>
-                                <List.Item as='li' style={textStyle}>Gunicorn interface serving flask application</List.Item>
+                                <List.Item as='li' style={textStyle}>Interface serving flask application</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>Database</Header>
+                            <p style={subStyle}>POSTGRES</p>
                             <List as='ul'>
                                 <List.Item as='li' style={textStyle}>SQLAlchemy ORM for translating python objects to relational data</List.Item>
-                                <List.Item as='li' style={textStyle}>PostgreSQL database</List.Item>
+                                <List.Item as='li' style={textStyle}>PostgreSQL database for storing blog posts and JWT tokens etc</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>Deployment</Header>
                             <List as='ul'>
-                                <List.Item as='li' style={textStyle}>UNKNOWN</List.Item>
+                                <List.Item as='li' style={textStyle}>Docker containers for each microservice</List.Item>
                             </List>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
         </Container>
-      
-        <GitTable />
+
             
         <Container style={{ margin:'2em' }} textAlign='center'>
             <Grid container stackable >

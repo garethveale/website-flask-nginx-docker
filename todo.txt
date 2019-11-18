@@ -1,5 +1,4 @@
 SOFTWARE
--Git hub data into the table
 
 CONTACT
 -Form validation
