@@ -1,5 +1,3 @@
-SOFTWARE
-
 CONTACT
 -Form validation
 -Send the contact form to my email
@@ -10,12 +8,3 @@ Nginx server
 WSGI server
 Security
 Deployment
-
-
-
-Second Iteration
-POSTS
--Display the post detail after clicking on a post - i.e. slug
--Pass down the data from db as props
-
-

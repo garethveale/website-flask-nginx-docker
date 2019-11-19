@@ -3,7 +3,7 @@ import { PageHeading } from '../common/PageHeading';
 import GitTable from './GitTable';
 import BarChart from './BarChart';
 import { Footer } from '../common/Footer';
-import { Container, Divider, Grid, Header, List } from 'semantic-ui-react';
+import { Container, Divider, Grid, Header, List, Segment } from 'semantic-ui-react';
 
 function Software() {   
     const textStyle = {
@@ -23,11 +23,11 @@ function Software() {
 
         <GitTable />
 
-            <Container style={{ margin:'2em' }} textAlign='center'>
+            <Segment style={{ backgroundColor: '#f2f2f2' }} textAlign='center'>
                 <Header as='h3' style={{ color: 'black' }}>Website Tech Stack</Header>
-                <Divider />
                 <p style={subStyle}>Scalable containerised web architecture for hosting multiple applications</p>
-                <Grid columns={6} stackable>
+                <Divider />
+                <Grid columns={6} stackable style={{ padding: '2em' }}>
                     <Grid.Row >
                         <Grid.Column textAlign='left'>
                             <Header as='h6' style={{ color: 'black' }}>Front end</Header>
@@ -71,11 +71,12 @@ function Software() {
                             <Header as='h6' style={{ color: 'black' }}>Deployment</Header>
                             <List as='ul'>
                                 <List.Item as='li' style={textStyle}>Docker containers for each microservice</List.Item>
+                                <List.Item as='li' style={textStyle}>Platform for hosting multiple web applications, each in it's own container</List.Item>
                             </List>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
-        </Container>
+        </Segment>
 
             
         <Container style={{ margin:'2em' }} textAlign='center'>
@@ -88,13 +89,13 @@ function Software() {
                 <Grid.Column floated='right' width={6} textAlign='left'>
                     <Header as='h6' style={{ textAlign:'center' }}>Future Ventures (teach myself)</Header>
                     <List as='ul'> 
-                        <List.Item as='li' style={textStyle}>Low level programming</List.Item> 
-                        <List.Item as='li' style={textStyle}>C++</List.Item>             
-                        <List.Item as='li' style={textStyle}>Large data sets/Time series data</List.Item>       
-                        <List.Item as='li' style={textStyle}>Blockchain</List.Item> 
-                        <List.Item as='li' style={textStyle}>Machine Learning</List.Item>    
-                        <List.Item as='li' style={textStyle}>Scalable distributed systems (infrastructure, networks, microservices)</List.Item>
-                        <List.Item as='li' style={textStyle}>Business</List.Item>  
+                        <List.Item style={textStyle}>Low level programming</List.Item> 
+                        <List.Item style={textStyle}>C++</List.Item>             
+                        <List.Item style={textStyle}>Large data sets/Time series data</List.Item>       
+                        <List.Item style={textStyle}>Blockchain</List.Item> 
+                        <List.Item style={textStyle}>Machine Learning</List.Item>    
+                        <List.Item style={textStyle}>Scalable distributed systems (infrastructure, networks, microservices)</List.Item>
+                        <List.Item style={textStyle}>Business</List.Item>  
                     </List>
                 </Grid.Column>
                 </Grid.Row>

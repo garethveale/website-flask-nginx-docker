@@ -20,7 +20,18 @@ function GitTable() {
     });
 
     const headStyle = {
-      fontSize: '0.75em'
+      fontSize: '0.75em',
+      width: '25em'
+    }
+
+    const medHeadStyle = {
+      fontSize: '0.75em',
+      width: '20em'
+    }
+    
+    const smallHeadStyle = {
+      fontSize: '0.75em',
+      width: '10em'
     }
     
     const cellStyle = {
@@ -28,15 +39,15 @@ function GitTable() {
     }
 
     return (
-    <Container style={{ paddingLeft:'5em', paddingRight:'5em', marginTop:'2em'}}>
+    <Container style={{ marginTop:'2em'}}>
     <Header as='h3'>Software Repositories</Header>
     <Table responsive striped hover size="sm">
         <thead>
             <tr>
-            <th style={headStyle}>Title</th>
+            <th style={medHeadStyle}>Title</th>
             <th style={headStyle}>Description</th>
-            <th style={headStyle}>Language</th>
-            <th style={headStyle}>Size</th>
+            <th style={smallHeadStyle}>Language</th>
+            <th style={smallHeadStyle}>Size</th>
             </tr>
         </thead>
         <tbody>   
@@ -54,17 +65,3 @@ function GitTable() {
 )}
 
 export default GitTable;
-/**
- *             {git.map(repo => {
-                return (
-                    <tr key={repo.id}>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    </tr>
-                    )
-                })}
- * 
- */
