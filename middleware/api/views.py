@@ -3,7 +3,7 @@ from api.forms import ContactForm
 from api.models import Post, BookNote
 from api.send_email import send_contact_form
 from api.github import git_stats
-from flask import jsonify
+from flask import jsonify, request, flash
 
 
 @app.route('/posts')
@@ -40,14 +40,16 @@ def book_notes():
     return jsonify({'book_notes': book_notes})
 
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact', methods=['POST'])
 def contact():
-    form = ContactForm()
-    if form.validate_on_submit():
-        send_contact_form(form.first_name, form.surname, form.phone_number, form.email, form.body)
-        flash('Email sent to Gareth')  # TODO remove this
-        return redirect(url_for('index'))
-    return 'Form should be displayed'
+    form_data = request.get_json()
+    #if form.validate_on_submit():
+    send_contact_form(form_data['subject'], form_data['email'], form_data['text'])
+    
+    flash('Email sent {}, remember_me={}'.format(
+            form_data['subject'], form_data['email']))
+
+    return 'Done', 201
 
 
 @app.route('/software')

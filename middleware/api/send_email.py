@@ -3,14 +3,12 @@ import smtplib
 import os
 
 
-def send_contact_form(first_name, surname, number, email, body):
+def send_contact_form(subject, email, body):
     message = '''
-    FirstName:{},
-    Surname{},
+    Subject:{},
     Email:{},
-    Number:{},
     Message:{}
-    '''.format(first_name, surname, number, email, body)
+    '''.format(subject, email, body)
     try:
         server = smtplib.SMTP('smtp.gmail.com')
         server.starttls()

@@ -1,6 +1,6 @@
 CONTACT
 -Form validation
--Send the contact form to my email
+-Clear form once it has been posted
 
 Docker
 Database
