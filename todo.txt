@@ -1,7 +1,3 @@
-CONTACT
--Form validation
--Clear form once it has been posted
-
 Docker
 Database
 Nginx server

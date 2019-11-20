@@ -7,20 +7,33 @@ export const Contact = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [text, setText] = useState('');
+  const [emailError, setEmailError] = useState('');
 
       return (
+
         <div style={{ backgroundColor: '#011627', height: '100vh' }}>
             <PageHeading title='Contact me' />
             <Container>
             <Grid textAlign='center' style={{ height: '5vh' }} verticalAlign='middle'>
-            <Grid.Column style={{ maxWidth: 400 }}>
+              <Grid.Column style={{ maxWidth: 400 }}>
+
               <Form size='large'>
                 <Segment stacked>
                   <Form.Input 
                     fluid 
                     placeholder='E-mail address' 
                     style={{ fontSize: '0.75em' }}
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={e => {
+                      if(e.target.value.includes('@')){
+                        setEmail(e.target.value);
+                        setEmailError(false);
+                      } 
+                      else {
+                        setEmailError(true);
+                      }
+                    }}  
+                    type='email'
+                    error={emailError === true ? true :false}
                     />
                   <Form.Input
                     fluid
@@ -38,7 +51,13 @@ export const Contact = () => {
                     color='teal' 
                     fluid 
                     size='large' 
+                    type='submit'
                     style={{ fontSize: '1em' }}
+                    disabled={
+                      !email
+                      || !subject
+                      || !text
+                    }
                     onClick={async () => {
                       const message = {email, subject, text}
                       const response = await fetch('/contact', {
@@ -51,17 +70,19 @@ export const Contact = () => {
 
                       if (response.ok) {
                         console.log('response worked!');
-                        setEmail('')
-                        setSubject('')
-                        setText('')
+                        setEmail('');
+                        setSubject('');
+                        setText('');
                       }
                     }}>Send</Button>
                   </Form.Field>
                 </Segment>
               </Form>
-            </Grid.Column>
-          </Grid>
+
+              </Grid.Column>
+            </Grid>
           </Container>
         </div>
+
       )
 }

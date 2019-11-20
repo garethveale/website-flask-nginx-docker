@@ -43,12 +43,7 @@ def book_notes():
 @app.route('/contact', methods=['POST'])
 def contact():
     form_data = request.get_json()
-    #if form.validate_on_submit():
     send_contact_form(form_data['subject'], form_data['email'], form_data['text'])
-    
-    flash('Email sent {}, remember_me={}'.format(
-            form_data['subject'], form_data['email']))
-
     return 'Done', 201
 
 
