@@ -1,4 +1,3 @@
-Security
 Docker
 Gunicorn
 Nginx server

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Header, Grid, Icon, Form, Segment } from 'semantic-ui-react';
-// TODO: Pass mobile down as props
 
 export const HomeHeading = ({ mobile }) => {
     const textStyle = {
