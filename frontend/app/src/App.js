@@ -18,7 +18,6 @@ return (
           </Switch>
       </div>
     </Router>
-
   );
 }
 export default App;

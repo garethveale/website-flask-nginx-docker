@@ -1,6 +1,6 @@
-Docker
-Database
-Nginx server
-WSGI server
 Security
+Docker
+Gunicorn
+Nginx server
+Database
 Deployment
