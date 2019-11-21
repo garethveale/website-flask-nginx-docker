@@ -1,5 +1,8 @@
-Docker
-Gunicorn
-Nginx server
-Database
-Deployment
+Containerize/set up with Docker
+-Flask app
+-React app
+-Gunicorn
+-Nginx server
+-Database
+
+DEPLOY TO PRODUCTION
