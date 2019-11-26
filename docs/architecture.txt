@@ -1,3 +1,10 @@
+Ports 
+3000    React same network
+3001    External network
+1337    Nginx External
+5000    Gunicorn same network
+
+
 Front End
 - Static single page app written in React (consider Next.js)
     -Nextjs offers SSR rather than CSR allowing users to begin using the page while waiting for react to build virtual DOM etc.

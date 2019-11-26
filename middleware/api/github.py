@@ -1,5 +1,4 @@
 import requests
-# TODO write own GitHub API handler
 
 URL = 'https://api.github.com/'
 

@@ -2,7 +2,13 @@ from api import app
 from api.forms import ContactForm
 from api.send_email import send_contact_form
 from api.github import git_stats
-from flask import jsonify, request, flash
+from flask import jsonify, request
+
+
+@app.route("/")
+def hello_world():
+    return jsonify(hello="world")
+
 
 @app.route('/contact', methods=['POST'])
 def contact():

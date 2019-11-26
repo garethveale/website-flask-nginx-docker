@@ -1,6 +1,5 @@
 from api import db
 from datetime import datetime
-from slugify import slugify
 
 categories = db.Table('categories',
     db.Column('category_name', db.String, db.ForeignKey('category.name'),
@@ -31,8 +30,6 @@ class Post(db.Model):
     slug = db.Column(db.String(64), unique=True)
 
     def __init__(self, *args, **kwargs):
-        if 'slug' not in kwargs:
-            kwargs['slug'] = slugify(kwargs.get('title', ''))
         super().__init__(*args, **kwargs)
 
     def __repr__(self):
@@ -59,8 +56,6 @@ class BookNote(db.Model):
     slug = db.Column(db.String(64), unique=True)
 
     def __init__(self, *args, **kwargs):
-        if 'slug' not in kwargs:
-            kwargs['slug'] = slugify(kwargs.get('title', ''))
         super().__init__(*args, **kwargs)
 
     def __repr__(self):
