@@ -2,21 +2,19 @@ version: '3.7'
 
 services:
   web:
-    build:
-      context: ./middleware
-      dockerfile: Dockerfile.prod
+    build: ./middleware
     command: gunicorn --bind 0.0.0.0:5000 main:app
-    expose:
-      - 5000
+    ports:
+      - 5000:5000
     env_file:
       - ./.env.prod
 
-  nginx:
-    build: ./nginx
-    ports:
-      - 1337:80
-    depends_on:
-      - web
+  # nginx:
+  #   build: ./nginx
+  #   ports:
+  #     - 1337:80
+  #   depends_on:
+  #     - web
 #     depends_on:
 #       - db
 #   db:

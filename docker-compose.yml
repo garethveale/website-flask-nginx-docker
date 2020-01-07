@@ -5,11 +5,12 @@ services:
     build: ./middleware
     command: python main.py run -h 0.0.0.0
     volumes:
-      - ./middleware:/home/garethveale
+      - ./middleware/:/usr/src/app/
     ports:
       - 5000:5000
     env_file:
-      - ./.env.dev
+      - ./middleware/.flaskenv
+
 #     depends_on:
 #       - db
 #   db:
