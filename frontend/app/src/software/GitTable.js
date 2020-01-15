@@ -40,7 +40,7 @@ function GitTable() {
 
     return (
     <Container style={{ marginTop:'2em'}}>
-    <Header as='h3'>Software Repositories</Header>
+    <Header as='h3' style={{ color: '#011627' }}>Software Repositories</Header>
     <Table responsive striped hover size="sm">
         <thead>
             <tr>

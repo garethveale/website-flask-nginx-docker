@@ -11,8 +11,8 @@ export const Contact = () => {
 
       return (
 
-        <div style={{ backgroundColor: '#011627', height: '100vh' }}>
-            <PageHeading title='Contact me' />
+        <div style={{ backgroundColor: 'white', height: '100vh' }}>
+            <PageHeading title='Contact me' navColor='dark' color='light'/>
             <Container>
             <Grid textAlign='center' style={{ height: '5vh' }} verticalAlign='middle'>
               <Grid.Column style={{ maxWidth: 400 }}>

@@ -6,7 +6,7 @@ export const PageHeading = ({ title, color, navColor, headHeight, margin }) => (
     // TODO: Support smaller rendering when on mobile device
   <div style={{ backgroundColor: color === 'light' ? 'white' : '#011627', }}>
     <NavBar color={navColor}/>
-    <Container  textAlign='center' style={{ 
+    {/* <Container  textAlign='center' style={{ 
       height: headHeight === 'small' ? '1vh' : '15vh',
       marginBottom: margin === 'large' ? '8em' : '0.2em', 
       }} >
@@ -22,6 +22,6 @@ export const PageHeading = ({ title, color, navColor, headHeight, margin }) => (
             color: color === 'light' ? 'black' : '#FDFFFC',
           }}
       />
-    </Container>
+    </Container> */}
   </div>
 )

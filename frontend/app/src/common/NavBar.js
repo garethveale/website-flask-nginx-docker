@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 
 export const NavBar = ({ color }) => {
     const linkStyle = {
-        color: color === 'dark' ? 'black' :'#FDFFFC',
+        color: color === 'dark' ? '#011627' :'#FDFFFC',
         fontSize: '0.8em',
         fontWeight: '500'
     }
