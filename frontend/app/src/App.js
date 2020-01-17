@@ -12,7 +12,6 @@ return (
       <div className="App">
           <Switch>
               <Route exact path="/" component={Home2} />
-              <Route path="/contact" component={Contact} />
               <Route path="/software" component={Software} />
               <Route component={NotFound} />
           </Switch>

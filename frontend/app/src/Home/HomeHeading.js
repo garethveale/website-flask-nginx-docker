@@ -34,7 +34,7 @@ export const HomeHeading = ({ mobile }) => {
             <Container textAlign='center' style={{ paddingTop: '1em' }}>
               <a href='https://twitter.com/garethveale' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}><Icon size='big' name='twitter' link style={{color:'#011627', }}></Icon></a>
               <a href='https://github.com/garethiv' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='github' link style={{color:'#011627'}} /></a>
-              <a href='/contact' style={{ textDecoration: 'none' }}>  <Icon size='big' name='mail' link style={{color:'#011627'}} /></a>
+              <a href='mailto:gareth@garethveale.dev' style={{ textDecoration: 'none' }}>  <Icon size='big' name='mail' link style={{color:'#011627'}} /></a>
               <a href='https://www.youtube.com/channel/UCN71dsoRmbKXWWihXB2VOqw/featured?view_as=subscriber' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='youtube' link style={{color:'#011627'}} /></a>
               <a href='https://www.twitch.tv/garethv' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='twitch' link style={{color:'#011627'}} /></a>
               <a href='https://www.linkedin.com/in/garethveale/' target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>  <Icon size='big' name='linkedin' link style={{color:'#011627'}} /></a>
